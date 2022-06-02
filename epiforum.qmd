@@ -6,31 +6,43 @@ format:
     css: "css/epiforum.css"
     parallax-background-image: "img/galaxy-s20.jpg"
     parallax-background-size: "3200px 1024px"
-    parallax-background-horizontal: 500
-    parallax-background-vertical: 100
+    parallax-background-horizontal: 300
+    parallax-background-vertical: 2
     footer: "2022 IADR/APR epiForum"
 width: 1200
 editor: visual
 ---
 
-## 
-
-#  {#title}
-
 ::: {.ti style="font-weight: bold; letter-spacing: 5px; line-height: 50%;"}
-Effect of Number of Teeth on Social Participation among Older Adults
+Effect of Number of Teeth on
+
+Social Participation
+
+among Older Adults
+:::
+
+![](img/tu-logo.png){#logo .absolute top="-1%" left="-2%" height="auto" width="120"}
+
+![](img/IADR_BEHSR.png){.absolute bottom="-1%" right="-5%" width="200"}
+
+::: {.cen .red style="font-weight: bold;"}
+***Longitudinal Modified Treatment Policy Approach***
 :::
 
 <hr style="opacity:0.7; ">
 
 ::: {.cen style="font-size: 0.8em;"}
-Upul Cooray $^🎙️$ $^1$, Kenji Takeuchi$^1$, Ken Osaka$^1$ and Jun Aida$^2$
+Upul Cooray $^🎙️$ $^1$, Georgios Tsakos$^2$, Anja Heilmann$^2$, Richard G Watt$^2$, Kenji Takeuchi$^1$, Katsunori Kondo$^3$, Ken Osaka$^1$ & Jun Aida$^4$
 :::
 
 ::: {style="font-size: 0.6em;text-align:left;"}
 $^1$*Graduate school of dentistry, Tohoku University, Japan.*
 
-$^2$*Tokyo Medical and Dental University, Japan.*
+$^2$Department of Epidemiology and Public Health, University College London, London, United Kingdom
+
+$^3$Center for Preventive Medical Sciences, Chiba University, Chiba, Japan
+
+$^4$*Tokyo Medical and Dental University, Japan.*
 :::
 
 🎙️ 🇱🇰 **Upul Cooray**
