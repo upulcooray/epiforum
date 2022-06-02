@@ -1,11 +1,42 @@
 ---
-title: "epiforum"
+format: 
+  revealjs:
+    slide-number: true
+    preview-links: auto
+    css: "css/epiforum.css"
+    parallax-background-image: "img/galaxy-s20.jpg"
+    parallax-background-size: "3200px 1024px"
+    parallax-background-horizontal: 500
+    parallax-background-vertical: 100
+    footer: "2022 IADR/APR epiForum"
+width: 1200
+editor: visual
 ---
 
-## Quarto
+## 
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+#  {#title}
 
-```{r}
-1 + 1
-```
+::: {.ti style="font-weight: bold; letter-spacing: 5px; line-height: 50%;"}
+Effect of Number of Teeth on Social Participation among Older Adults
+:::
+
+<hr style="opacity:0.7; ">
+
+::: {.cen style="font-size: 0.8em;"}
+Upul Cooray $^🎙️$ $^1$, Kenji Takeuchi$^1$, Ken Osaka$^1$ and Jun Aida$^2$
+:::
+
+::: {style="font-size: 0.6em;text-align:left;"}
+$^1$*Graduate school of dentistry, Tohoku University, Japan.*
+
+$^2$*Tokyo Medical and Dental University, Japan.*
+:::
+
+🎙️ 🇱🇰 **Upul Cooray**
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
