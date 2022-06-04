@@ -2,12 +2,14 @@
 format: 
   revealjs:
     slide-number: true
+    incremental: true   
     preview-links: auto
     css: "css/epiforum.css"
     parallax-background-image: "img/galaxy-s20.jpg"
     parallax-background-size: "3200px 1024px"
     parallax-background-horizontal: 300
     parallax-background-vertical: 2
+    navigation-mode: linear
     footer: "2022 IADR/APR epiForum"
 width: 1200
 editor: visual
@@ -47,8 +49,142 @@ $^4$*Tokyo Medical and Dental University, Japan.*
 
 🎙️ 🇱🇰 **Upul Cooray**
 
-------------------------------------------------------------------------
 
-------------------------------------------------------------------------
+# [Background]{.title-deco .bg-r .red} {background-video="rain.mp4" background-video-loop="true"}
 
-------------------------------------------------------------------------
+---------------------------------------------------------------
+
+# [Background]{.title-deco2 .bg-r} {}
+
+::: sub
+An Overview of Existing Causal Inference Methodology
+:::
+
+::: {.columns style="font-size:30px;"}
+::: {.column width="70%"}
+::: {.infobox .li-m}
+-   Most methods utilize **conterfactual (potential outcomes)** framework
+
+-   We **manipulate the exposure** for the [same observations]{.red} and then compare outcomes under different exposures
+
+-   Mostly, binary exposures are used \[what if everyone [exposed]{.red} Vs what if everyone [not exposed]{.green}\]
+
+-   Known as **static interventions**
+
+::: fragment
+![](img/cf1.png){.absolute bottom="0%" left="10%" width="230"}
+:::
+:::
+:::
+
+::: {.column width="29%"}
+::: {.infobox .bg-r .fragment}
+[Some Limitations]{.red .lrb-r}
+
+1.  Positivity violations
+
+2.  Unrealistic interventions
+
+3.  Cannot depend on the observed exposure
+
+4.  Policy implications of conterfactual extremes 🤔
+
+5.  Forced to dichotomise the exposure
+:::
+:::
+:::
+
+# [Background]{.title-deco2 .bg-r} {#background2}
+
+::: sub
+An Overview of Existing Causal Inference Methodology
+:::
+
+<br>
+
+::: columns
+::: {.column width="32%"}
+::: {.fragment .f-25 fragment-index="1"}
+🎯 Static interventions <br> <br> <br> <br>
+:::
+
+::: {.fragment .f-20 .lrb-b fragment-index="2"}
+Setting all the participants in the study to the same hypothetical exposure level
+:::
+
+::: {.fragment fragment-index="3"}
+
+<br><br> 
+
+![](img/static.png){width="250"}
+:::
+:::
+
+::: {.column width="32%"}
+::: {.fragment .f-25 fragment-index="4"}
+🎯 Dynamic interventions <br> <br> <br> <br>
+:::
+
+::: {.fragment .f-20 .lrb-r fragment-index="5"}
+Hypothetical exposure level for participants is dependent on baseline covariates
+
+Eg: setting a certain exposure level only for participants with low income level
+:::
+
+::: {.fragment fragment-index="6"}
+
+<br>
+![](img/dynamic.png){width="250"}
+:::
+:::
+
+::: {.column width="32%"}
+::: {.fragment .f-25 fragment-index="7"}
+🎯 Modified interventions <br> <br> <br> <br>
+:::
+
+::: {.fragment .f-20 fragment-index="8" .lrb-b}
+Setting participant to a new exposure level based on their observed (naturally occurring) value of the exposure
+
+Eg: Change the level of exposure by 10%
+:::
+
+::: {.fragment fragment-index="9"}
+<br>
+![](img/mtp.png){width="250"}
+:::
+:::
+:::
+
+
+# [Background]{.title-deco2 .bg-r} {#background2}
+
+::: sub
+ What are Modified Treatment Policies
+:::
+
+- A collection of nonparametric alternatives for defining and yielding effects from interesting causal inference questions.
+
+- Capable of estimating meaningful interventions with practical relevance such as reducing or increasing the exposure by a given amount. 
+
+- Please read the paper by Iván Díaz and colleagues titled _"Nonparametric Causal Effects Based on Longitudinal Modified Treatment Policies"_ for further details (R package `lmtp` provides software implementation of the methods).  
+
+- lmtp software allows the user to handle:
+
+    -- Cross-sectional or longitudinal exposures
+    -- Binary, categorical, or continuous exposures
+    -- Exposures that are dependent on time
+    -- Time-dependent covariates
+    -- Multiple exposures
+    -- Binary, continuous, or time-to-event outcomes
+    -- Informative loss to follow-up/censoring
+    -- Competing risks
+    -- Survey weights
+
+
+
+
+
+
+
+

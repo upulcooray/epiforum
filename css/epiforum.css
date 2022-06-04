@@ -32,6 +32,22 @@
 }
     
 
+.lrb-b{ 
+  border-left: solid 5px #83e3f6a0;
+  border-right: solid 5px #83e3f6a0;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+
+.lrb-r{ 
+  border-left: solid 5px #f683b1a0;
+  border-right: solid 5px #f683b1a0;
+  border-radius: 10px;
+  padding: 2px;
+
+}
+
 
 .title-deco {
     border-radius: 0px 50px 50px 0px;
@@ -44,6 +60,20 @@
     letter-spacing: 5px;
     }
     
+.title-deco2 {
+    border-radius: 0px 50px 50px 0px;
+    border:5px solid rgba(33, 31, 82, 0.862);
+    padding-left: 200px;
+    padding-right: 50px;
+    margin-left: -200px;
+    position: absolute;
+    top:-60px;
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: 7px;
+    }
+   
+
     
 .side-title {
     height: 100px;
@@ -55,13 +85,13 @@
     
     
 .bg-b{
-    background-color:rgba(68, 188, 225, 0.25); }
+    background-color:rgba(68, 188, 225, 0.15); }
 .bg-g{
-    background-color:rgba(52, 242, 160, 0.25); }
+    background-color:rgba(52, 242, 160, 0.15); }
 .bg-r{
-    background-color:rgba(225, 68, 152, 0.25); }
+    background-color:rgba(225, 68, 152, 0.15); }
 .bg-y{
-    background-color:rgba(248, 237, 40, 0.25); }
+    background-color:rgba(248, 237, 40, 0.15); }
 
 .circle-num {
     display: inline-flex;
@@ -76,13 +106,36 @@
     }
 
 .infobox {
-    min-width: 200px;
-    min-height: 100px;
+    width: fit-content;
+    height: fit-content;
+    word-wrap: break-word;
     margin: 10px auto 15px;
     text-align: left;
-    padding: 20px;
+    padding: 5px;
     border-radius: 20px;
     }
+    
+.sub{
+  position: absolute;
+  font-family: "Comic Sans MS", cursive;
+  border-bottom:solid 10px rgba(68, 188, 225, 0.25); 
+  border-top:solid 10px rgba(68, 188, 225, 0.25); 
+  top:-60px;
+  right:50px;
+  width: fit-content;
+  color:rgba(0, 61, 159, 1);
+  margin: 10px auto 15px;
+  padding:0px  10px 0px 10px;
+  text-align: left;
+  border-radius: 20px;
+  font-size: 0.8em;
+  margin-left:-80px;
+  font-weight: bold;
+  font-style: italic;
+  
+} 
+
+  
 
 .box {
     min-width: 50px;
@@ -133,6 +186,53 @@
   
     font-family: 'Schoolbell', arial, serif; 
 }
+
+
+
+.li-m ul li::marker{
+  content: "👉 ";
+}
+
+ol li::marker {
+  content: counter(list-item) "› ";
+  color: hotpink;
+}
+
+
+ul li:nth-child(2n+2)::marker{
+    content: "👉🏽 ";
+}
+
+
+
+.f-15{
+  font-size: 15px;
+}
+
+
+
+.f-18{
+  font-size: 18px;
+}
+
+.f-20{
+  font-size: 20px;
+}
+
+.f-22{
+  font-size: 22px;
+}
+
+
+  
+.f-25{
+  font-size: 25px;
+}
+  
+
+
+
+
 
 
 

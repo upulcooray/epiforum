@@ -344,14 +344,103 @@
 </div>
 <p>🎙️ 🇱🇰 <strong>Upul Cooray</strong></p>
 </section>
-<section class="slide level2">
+<section>
+<section id="background" class="title-slide slide level1 center" data-background-video="rain.mp4" data-background-video-loop="true">
+<h1><span class="title-deco bg-r red">Background</span></h1>
 
 </section>
 <section class="slide level2">
 
+</section></section>
+<section id="background-1" class="title-slide slide level1 center">
+<h1><span class="title-deco2 bg-r">Background</span></h1>
+<div class="sub">
+<p>An Overview of Existing Causal Inference Methodology</p>
+</div>
+<div class="columns" style="font-size:30px;">
+<div class="column" style="width:70%;">
+<div class="infobox li-m">
+<ul>
+<li class="fragment"><p>Most methods utilize <strong>conterfactual (potential outcomes)</strong> framework</p></li>
+<li class="fragment"><p>We <strong>manipulate the exposure</strong> for the <span class="red">same observations</span> and then compare outcomes under different exposures</p></li>
+<li class="fragment"><p>Mostly, binary exposures are used [what if everyone <span class="red">exposed</span> Vs what if everyone <span class="green">not exposed</span>]</p></li>
+<li class="fragment"><p>Known as <strong>static interventions</strong></p></li>
+</ul>
+<div class="fragment">
+<p><img data-src="img/cf1.png" class="absolute" style="left: 10%; bottom: 0%; width: 230px; "></p>
+</div>
+</div>
+</div><div class="column" style="width:29%;">
+<div class="infobox bg-r fragment">
+<p><span class="red lrb-r">Some Limitations</span></p>
+<ol type="1">
+<li class="fragment"><p>Positivity violations</p></li>
+<li class="fragment"><p>Unrealistic interventions</p></li>
+<li class="fragment"><p>Cannot depend on the observed exposure</p></li>
+<li class="fragment"><p>Policy implications of conterfactual extremes 🤔</p></li>
+<li class="fragment"><p>Forced to dichotomise the exposure</p></li>
+</ol>
+</div>
+</div>
+</div>
 </section>
-<section class="slide level2">
 
+<section id="background2" class="title-slide slide level1 center">
+<h1><span class="title-deco2 bg-r">Background</span></h1>
+<div class="sub">
+<p>An Overview of Existing Causal Inference Methodology</p>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:32%;">
+<div class="fragment f-25" data-fragment-index="1">
+<p>🎯 Static interventions <br> <br> <br> <br></p>
+</div>
+<div class="fragment f-20 lrb-b" data-fragment-index="2">
+<p>Setting all the participants in the study to the same hypothetical exposure level</p>
+</div>
+<div class="fragment" data-fragment-index="3">
+<p><br><br></p>
+<p><img data-src="img/static.png" width="250"></p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="fragment f-25" data-fragment-index="4">
+<p>🎯 Dynamic interventions <br> <br> <br> <br></p>
+</div>
+<div class="fragment f-20 lrb-r" data-fragment-index="5">
+<p>Hypothetical exposure level for participants is dependent on baseline covariates</p>
+<p>Eg: setting a certain exposure level only for participants with low income level</p>
+</div>
+<div class="fragment" data-fragment-index="6">
+<p><br> <img data-src="img/dynamic.png" width="250"></p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="fragment f-25" data-fragment-index="7">
+<p>🎯 Modified interventions <br> <br> <br> <br></p>
+</div>
+<div class="fragment f-20 lrb-b" data-fragment-index="8">
+<p>Setting participant to a new exposure level based on their observed (naturally occurring) value of the exposure</p>
+<p>Eg: Change the level of exposure by 10%</p>
+</div>
+<div class="fragment" data-fragment-index="9">
+<p><br> <img data-src="img/mtp.png" width="250"></p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="background2" class="title-slide slide level1 center">
+<h1><span class="title-deco2 bg-r">Background</span></h1>
+<div class="sub">
+<p>What are Modified Treatment Policies</p>
+</div>
+<ul>
+<li class="fragment"><p>A collection of nonparametric alternatives for defining and yielding effects from interesting causal inference questions.</p></li>
+<li class="fragment"><p>Capable of estimating meaningful interventions with practical relevance such as reducing or increasing the exposure by a given amount.</p></li>
+<li class="fragment"><p>Please read the paper by Iván Díaz and colleagues titled <em>“Nonparametric Causal Effects Based on Longitudinal Modified Treatment Policies”</em> for further details (R package <code>lmtp</code> provides software implementation of the methods).</p></li>
+<li class="fragment"><p>lmtp software allows the user to handle:</p>
+<p>– Cross-sectional or longitudinal exposures – Binary, categorical, or continuous exposures – Exposures that are dependent on time – Time-dependent covariates – Multiple exposures – Binary, continuous, or time-to-event outcomes – Informative loss to follow-up/censoring – Competing risks – Survey weights</p></li>
+</ul>
 <div class="footer footer-default">
 <p>2022 IADR/APR epiForum</p>
 </div>
