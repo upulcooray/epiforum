@@ -52,9 +52,11 @@
 .title-deco {
     border-radius: 0px 50px 50px 0px;
     border:5px solid rgba(33, 31, 82, 0.862);
-    padding-left: 200px;
-    padding-right: 50px;
-    margin-left: -200px;
+    width:100%;
+    float: right;
+    text-align: right;
+    padding-right: 10px;
+    margin-right:50%;
     font-size: 1.1em;
     font-weight: bold;
     letter-spacing: 5px;
@@ -85,13 +87,13 @@
     
     
 .bg-b{
-    background-color:rgba(68, 188, 225, 0.15); }
+    background-color:rgba(68, 188, 225, 0.2); }
 .bg-g{
-    background-color:rgba(52, 242, 160, 0.15); }
+    background-color:rgba(52, 242, 160, 0.2); }
 .bg-r{
-    background-color:rgba(225, 68, 152, 0.15); }
+    background-color:rgba(225, 68, 152, 0.2); }
 .bg-y{
-    background-color:rgba(248, 237, 40, 0.15); }
+    background-color:rgba(248, 237, 40, 0.2); }
 
 .circle-num {
     display: inline-flex;
@@ -120,16 +122,17 @@
   font-family: "Comic Sans MS", cursive;
   border-bottom:solid 10px rgba(68, 188, 225, 0.25); 
   border-top:solid 10px rgba(68, 188, 225, 0.25); 
-  top:-60px;
-  right:50px;
-  width: fit-content;
+  top:0px;
+  word-wrap: break-word;
+  float:left;
+  width: 50%;
   color:rgba(0, 61, 159, 1);
   margin: 10px auto 15px;
   padding:0px  10px 0px 10px;
-  text-align: left;
+  text-align: center;
   border-radius: 20px;
-  font-size: 0.8em;
-  margin-left:-80px;
+  font-size: 0.6em;
+  margin-left:51%;
   font-weight: bold;
   font-style: italic;
   
@@ -189,19 +192,28 @@
 
 
 
-.li-m ul li::marker{
-  content: "👉 ";
+.li-m ul li{
+  list-style-type: "👉 ";
 }
 
 ol li::marker {
-  content: counter(list-item) "› ";
+  content: counter(list-item) ;
   color: hotpink;
 }
 
 
-ul li:nth-child(2n+2)::marker{
-    content: "👉🏽 ";
+.li-m ul li:nth-child(2n+2){
+    list-style-type: "👉🏽";
 }
+
+.li-m ul li li{
+    list-style-type: "✅";
+}
+
+.li-m ul li li:nth-child(2n+2){
+    list-style-type: "✅";;
+}
+
 
 
 

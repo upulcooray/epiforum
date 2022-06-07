@@ -6,12 +6,12 @@ format:
     preview-links: auto
     css: "css/epiforum.css"
     parallax-background-image: "img/galaxy-s20.jpg"
-    parallax-background-size: "3200px 1024px"
+    parallax-background-size: "3400px 1400px"
     parallax-background-horizontal: 300
     parallax-background-vertical: 2
     navigation-mode: linear
     footer: "2022 IADR/APR epiForum"
-width: 1200
+max-scale: 3
 editor: visual
 ---
 
@@ -23,7 +23,7 @@ Social Participation
 among Older Adults
 :::
 
-![](img/tu-logo.png){#logo .absolute top="-1%" left="-2%" height="auto" width="120"}
+![](img/tu-logo.png){#logo .absolute top="-1%" left="-6%" height="auto" width="120"}
 
 ![](img/IADR_BEHSR.png){.absolute bottom="-1%" right="-5%" width="200"}
 
@@ -34,7 +34,9 @@ among Older Adults
 <hr style="opacity:0.7; ">
 
 ::: {.cen style="font-size: 0.8em;"}
-Upul Cooray $^🎙️$ $^1$, Georgios Tsakos$^2$, Anja Heilmann$^2$, Richard G Watt$^2$, Kenji Takeuchi$^1$, Katsunori Kondo$^3$, Ken Osaka$^1$ & Jun Aida$^4$
+Upul Cooray $^🎙️$ $^1$, Georgios Tsakos$^2$, Anja Heilmann$^2$, Richard G Watt$^2$,
+
+Kenji Takeuchi$^1$, Katsunori Kondo$^3$, Ken Osaka$^1$ & Jun Aida$^4$
 :::
 
 ::: {style="font-size: 0.6em;text-align:left;"}
@@ -49,18 +51,17 @@ $^4$*Tokyo Medical and Dental University, Japan.*
 
 🎙️ 🇱🇰 **Upul Cooray**
 
+# [Background]{.title-deco .bg-r .red} {background-color="rgba(18, 14, 35, 0.66)"}
 
-# [Background]{.title-deco .bg-r .red} {background-video="rain.mp4" background-video-loop="true"}
+------------------------------------------------------------------------
 
----------------------------------------------------------------
-
-# [Background]{.title-deco2 .bg-r} {}
+## [Background]{.title-deco .bg-r}
 
 ::: sub
 An Overview of Existing Causal Inference Methodology
 :::
 
-::: {.columns style="font-size:30px;"}
+::: {.columns style="font-size:30px;top:0%;"}
 ::: {.column width="70%"}
 ::: {.infobox .li-m}
 -   Most methods utilize **conterfactual (potential outcomes)** framework
@@ -94,7 +95,9 @@ An Overview of Existing Causal Inference Methodology
 :::
 :::
 
-# [Background]{.title-deco2 .bg-r} {#background2}
+------------------------------------------------------------------------
+
+## [Background]{.title-deco .bg-g} {#background2}
 
 ::: sub
 An Overview of Existing Causal Inference Methodology
@@ -113,8 +116,7 @@ Setting all the participants in the study to the same hypothetical exposure leve
 :::
 
 ::: {.fragment fragment-index="3"}
-
-<br><br> 
+<br><br>
 
 ![](img/static.png){width="250"}
 :::
@@ -132,9 +134,7 @@ Eg: setting a certain exposure level only for participants with low income level
 :::
 
 ::: {.fragment fragment-index="6"}
-
-<br>
-![](img/dynamic.png){width="250"}
+<br> ![](img/dynamic.png){width="250"}
 :::
 :::
 
@@ -143,48 +143,60 @@ Eg: setting a certain exposure level only for participants with low income level
 🎯 Modified interventions <br> <br> <br> <br>
 :::
 
-::: {.fragment .f-20 fragment-index="8" .lrb-b}
+::: {.fragment .f-20 .lrb-b fragment-index="8"}
 Setting participant to a new exposure level based on their observed (naturally occurring) value of the exposure
 
 Eg: Change the level of exposure by 10%
 :::
 
 ::: {.fragment fragment-index="9"}
-<br>
-![](img/mtp.png){width="250"}
+<br> ![](img/mtp.png){width="250"}
 :::
 :::
 :::
 
+------------------------------------------------------------------------
 
-# [Background]{.title-deco2 .bg-r} {#background2}
+## [Background]{.title-deco .bg-b} {.li-m}
 
 ::: sub
- What are Modified Treatment Policies
+What are Modified Treatment Policies
 :::
 
-- A collection of nonparametric alternatives for defining and yielding effects from interesting causal inference questions.
+::: f-22
+-   A collection of nonparametric alternatives for defining and yielding effects from interesting causal inference questions.
 
-- Capable of estimating meaningful interventions with practical relevance such as reducing or increasing the exposure by a given amount. 
+-   Capable of estimating meaningful interventions with practical relevance such as reducing or increasing the exposure by a given amount.
 
-- Please read the paper by Iván Díaz and colleagues titled _"Nonparametric Causal Effects Based on Longitudinal Modified Treatment Policies"_ for further details (R package `lmtp` provides software implementation of the methods).  
+-   See the paper by Iván Díaz and colleagues titled *"Nonparametric Causal Effects Based on Longitudinal Modified Treatment Policies"* for further details (R package `lmtp` provides software implementation of the methods).
 
-- lmtp software allows the user to handle:
+-   `lmtp` software allows the user to handle:
 
-    -- Cross-sectional or longitudinal exposures
-    -- Binary, categorical, or continuous exposures
-    -- Exposures that are dependent on time
-    -- Time-dependent covariates
-    -- Multiple exposures
-    -- Binary, continuous, or time-to-event outcomes
-    -- Informative loss to follow-up/censoring
-    -- Competing risks
-    -- Survey weights
+    -   Cross-sectional or longitudinal exposures
 
+    -   Binary, categorical, or continuous exposures
 
+    -   Exposures that are dependent on time
 
+    -   Time-dependent covariates
 
+    -   Multiple exposures
 
+    -   Binary, continuous, or time-to-event outcomes
 
+    -   Informative loss to follow-up/censoring
 
+    -   Competing risks
 
+    -   Survey weights
+:::
+
+# [Methods]{.title-deco .bg-g .red} {background-color="rgba(18, 14, 35, 0.66)"}
+
+------------------------------------------------------------------------
+
+## [Methods]{.title-deco .bg-g}
+
+::: sub
+Overview
+:::
