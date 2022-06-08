@@ -114,7 +114,7 @@
     }
 
 .infobox {
-    width: fit-content;
+    min-width: 3em;
     height: fit-content;
     word-wrap: break-word;
     margin: 10px auto 15px;
@@ -213,6 +213,9 @@ ol li::marker {
 }
 
 .li-m ul li li{
+    list-style-type: "✅"      ;
+}
+.li-m2 ul li li{
     list-style-type: "✅"      ;
 }
 
@@ -322,6 +325,7 @@ ol li::marker {
   font-size: 30px;
 }
   
+/* Blinking text*/
 
 .blink {
   color: red;
@@ -335,6 +339,12 @@ ol li::marker {
 }
 
 
+/* table*/
 
+table th, .reveal table td {
+    text-align: center;
+    padding: .2em .5em .2em .5em;
+    border-bottom:0.02px dashed
+}
 
 

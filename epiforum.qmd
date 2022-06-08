@@ -3,7 +3,7 @@ format:
   revealjs:
     slide-number: true
     incremental: true   
-    preview-links: auto
+    preview-links: true
     css: "css/epiforum.css"
     parallax-background-image: "img/galaxy-s20.jpg"
     parallax-background-size: "3202px 1024px"
@@ -286,14 +286,18 @@ Study variables
 Statistical analysis- main steps
 :::
 
-::: f-30
-Step 1: Defined the causal effect using MTP framework by shifting the observed exposure to different hypothetical scenarios
+::: {.f-25 .nonincremental style="padding-top:20%;"}
+[Step 1:]{.green} Defined the causal effect using MTP framework by [__shifting the observed exposure__]{.red} to different hypothetical scenarios
 
-Step 2: Estimate the population level outcome (mean outcome) under different scenarios specified in the step
 
--   Targeted minimum log-based estimation (TMLE) with weighted combination data adaptive regressions (machine learning algorithms) were used to estimate outcomes.
+[Step 2:]{.green} Estimate the population level outcome (mean outcome) under different scenarios specified in the step
 
-Step 3: Contrast the outcome estimates of hypothetical interventions against the outcome estimate under observed exposure level to calculate odds ratios.
+::: {.bg-b}
+>   [Targeted minimum loss-based estimation (TMLE)]{.red} with weighted combination data adaptive regressions (machine learning algorithms) were used to estimate outcomes.
+
+:::
+
+[Step 3:]{.green} [Contrast the outcome estimates]{.red} of hypothetical interventions against the outcome estimate under observed exposure level to calculate odds ratios.
 :::
 
 ------------------------------------------------------------------------
@@ -301,142 +305,174 @@ Step 3: Contrast the outcome estimates of hypothetical interventions against the
 ## [Methods]{.title-deco .bg-y}
 
 ::: sub
-Statistical analysis- Step 1
+Step 1- Shifting the observed exposure
 :::
 
-
-::::{.columns .f-20}
-:::{.column width="19.5%" .fragment }
-| actual |scenario 1|
-|:----|:---------|
-| t1  | t1       |
-| t3  | t3       |
-| t2  | t2       |
-| t2  | t2       |
-| t3  | t3       |
-| t3  | t3       |
-| t3  | t3       |
-| [t4]{.blink}  | [t3]{.c-num}       |
-| [t4]{.blink}  | [t3]{.c-num}       |
-| t1  | t1       |
-| t2  | t2       |
-| t2  | t2       |
-| t2  | t2       |
-| t1  | t1       |
-| [t4]{.blink}  | [t3]{.c-num}       |
-
+::: {.columns .f-20}
+::: {.column .fragment width="19.5%"}
+| actual       | scenario 1   |
+|:-------------|:-------------|
+| t1           | t1           |
+| t3           | t3           |
+| t2           | t2           |
+| t2           | t2           |
+| t3           | t3           |
+| t3           | t3           |
+| t3           | t3           |
+| [t4]{.blink} | [t3]{.c-num} |
+| [t4]{.blink} | [t3]{.c-num} |
+| t1           | t1           |
+| t2           | t2           |
+| t2           | t2           |
+| t2           | t2           |
+| t1           | t1           |
+| [t4]{.blink} | [t3]{.c-num} |
 :::
 
-:::{.column width="19.5%" .fragment}
-| actual |scenario 2|
-|:----|:---------|
-| t1  | t1       |
-| [t3]{.blink}  | [t2]{.blink_me}       |
-| t2  | t2       |
-| t2  | t2       |
-| [t3]{.blink}  | t2       |
-| [t3]{.blink}  | t2       |
-| [t3]{.blink}  | t2       |
-| [t4]{.blink}  | t2       |
-| [t4]{.blink} | t2       |
-| t1  | t1       |
-| t2  | t2       |
-| t2  | t2       |
-| t2  | t2       |
-| t1  | t1       |
-| [t4]{.blink}  | t2       |
-
+::: {.column .fragment width="19.5%"}
+| actual       | scenario 2   |
+|:-------------|:-------------|
+| t1           | t1           |
+| [t3]{.blink} | [t2]{.c-num} |
+| t2           | t2           |
+| t2           | t2           |
+| [t3]{.blink} | [t2]{.c-num} |
+| [t3]{.blink} | [t2]{.c-num} |
+| [t4]{.blink} | [t2]{.c-num} |
+| [t3]{.blink} | [t2]{.c-num} |
+| [t4]{.blink} | [t2]{.c-num} |
+| t1           | t1           |
+| t2           | t2           |
+| t2           | t2           |
+| t2           | t2           |
+| t1           | t1           |
+| [t4]{.blink} | [t2]{.c-num} |
 :::
 
-:::{.column width="19.5%" .fragment}
-
-|actual |scenario 3|
-|:---|:----|
-|t1  |t1   |
-|[t3]{.blink}  |t1   |
-|[t2]{.blink}  |t1   |
-|[t2]{.blink}  |t1   |
-|[t3]{.blink}  |t1   |
-|[t3]{.blink}  |t1   |
-|[t3]{.blink}  |t1   |
-|[t4]{.blink}  |t1   |
-|[t4]{.blink}  |t1   |
-|t1  |t1   |
-|[t2]{.blink}  |t1   |
-|[t2]{.blink}  |t1   |
-|[t2]{.blink}  |t1   |
-|t1  |t1   |
-|[t4]{.blink}  |t1   |
-
+::: {.column .fragment width="19.5%"}
+| actual       | scenario 3   |
+|:-------------|:-------------|
+| t1           | t1           |
+| [t3]{.blink} | [t1]{.c-num} |
+| [t2]{.blink} | [t1]{.c-num} |
+| [t2]{.blink} | [t1]{.c-num} |
+| [t3]{.blink} | [t1]{.c-num} |
+| [t3]{.blink} | [t1]{.c-num} |
+| [t3]{.blink} | [t1]{.c-num} |
+| [t4]{.blink} | [t1]{.c-num} |
+| [t4]{.blink} | [t1]{.c-num} |
+| t1           | t1           |
+| [t2]{.blink} | [t1]{.c-num} |
+| [t2]{.blink} | [t1]{.c-num} |
+| [t2]{.blink} | [t1]{.c-num} |
+| t1           | t1           |
+| [t4]{.blink} | [t1]{.c-num} |
 :::
 
-:::{.column width="19.5%" .fragment}
-
-|actual |scenario 4 |
-|:---|:----|
-|[t1]{.blink}  |t2   |
-|t3  |t3   |
-|t2  |t2   |
-|t2  |t2   |
-|t3  |t3   |
-|t3  |t3   |
-|t3  |t3   |
-|t4  |t4   |
-|t4  |t4   |
-|[t1]{.blink}  |t2   |
-|t2  |t2   |
-|t2  |t2   |
-|t2  |t2   |
-|[t1]{.blink}  |t2   |
-|t4  |t4   |
+::: {.column .fragment width="19.5%"}
+| actual       | scenario 4   |
+|:-------------|:-------------|
+| [t1]{.blink} | [t2]{.c-num} |
+| t3           | t3           |
+| t2           | t2           |
+| t2           | t2           |
+| t3           | t3           |
+| t3           | t3           |
+| t3           | t3           |
+| t4           | t4           |
+| t4           | t4           |
+| [t1]{.blink} | [t2]{.c-num} |
+| t2           | t2           |
+| t2           | t2           |
+| t2           | t2           |
+| [t1]{.blink} | [t2]{.c-num} |
+| t4           | t4           |
 :::
 
-:::{.column width="19.5%" .fragment}
-
-|actual |scenario 5 |
-|:---|:----|
-|[t1]{.blink}  |t3   |
-|t3  |t3   |
-|[t2]{.blink}  |t3   |
-|[t2]{.blink}  |t3   |
-|t3  |t3   |
-|t3  |t3   |
-|t3  |t3   |
-|t4  |t4   |
-|t4  |t4   |
-|[t1]{.blink}  |t3   |
-|[t2]{.blink}  |t3   |
-|[t2]{.blink} |t3   |
-|[t2]{.blink}  |t3   |
-|[t1]{.blink}  |t3   |
-|t4  |t4   |
-
+::: {.column .fragment width="19.5%"}
+| actual       | scenario 5   |
+|:-------------|:-------------|
+| [t1]{.blink} | [t3]{.c-num} |
+| t3           | t3           |
+| [t2]{.blink} | [t3]{.c-num} |
+| [t2]{.blink} | [t3]{.c-num} |
+| t3           | t3           |
+| t3           | t3           |
+| t3           | t3           |
+| t4           | t4           |
+| t4           | t4           |
+| [t1]{.blink} | [t3]{.c-num} |
+| [t2]{.blink} | [t3]{.c-num} |
+| [t2]{.blink} | [t3]{.c-num} |
+| [t2]{.blink} | [t3]{.c-num} |
+| [t1]{.blink} | [t3]{.c-num} |
+| t4           | t4           |
+:::
 :::
 
-
-::::
-
+::: {.f-15 .absolute .grey top="9%" left="55%"}
+*t1= 'edentulous' , t2= '1-9 teeth', t3= '10-19 teeth', t4= '\>=20 teeth'*
+:::
 
 ------------------------------------------------------------------------
 
 ## [Methods]{.title-deco .bg-r}
 
 ::: sub
-Statistical analysis- Step 2
+Step 2- Estimating outcome under shifted exposures
 :::
 
+::: {.absolute .bg-r .infobox .nonincremental .f-20 style="top:30%;width:35%;left:-6%;"}
+🎯 Doubly-robust TMLE was used to estimate the expected outcome under;
+
+-   Observed exposure
+-   Scenario 1 (\>=20 teeth -\> 10-19 teeth)
+-   Scenario 2 (\>=20 teeth & 10-19 teeth -\> 1-9 teeth)
+-   Scenario 3 (all edentulous - conterfactual extreme)
+-   Scenario 4 (edentulous -\> 1-9 teeth)
+-   Scenario 5 (edentulous & 1-9 teeth -\> 10-19 teeth)
+:::
+
+::: {.absolute .fragment right="3%" top="12%" width="700px" height="auto"}
+![](img/tmle1.png)
+:::
+
+::: {.absolute .fragment right="-12%" top="34%" width="300px" height="auto"}
+![](img/tmle2.png)
+:::
+
+
+:::{.fragment .absolute bottom="-1%"}
+[_Katherine Hoffman_ has witten some excellent blog posts to understand TMLE: https://www.khstats.com](https://www.khstats.com){.grey .f-15}
+:::
 ------------------------------------------------------------------------
 
 ## [Methods]{.title-deco .bg-b}
 
 ::: sub
-Statistical analysis- Step 3
+Step 3- Contrast outcome estimates to obtain the causal estimand
 :::
+
+We obtained following contrasts;
+
+:::{.li-m2}
+   - Observed vs scenario 1
+   - Observed vs scenario 2
+   - Observed vs scenario 3
+   - Observed vs scenario 4
+   - Observed vs scenario 5
+:::
+
+
 
 ------------------------------------------------------------------------
 
-## [Results]{.title-deco2 .bg-b}
+## [Results]{.title-deco2 .bg-b .red} {background-color="rgba(18, 14, 35, 0.66)"}
 
-::: sub
-Statistical analysis- Step 3
-:::
+---
+
+
+
+
+
+

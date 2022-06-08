@@ -542,19 +542,21 @@
 <div class="sub">
 <p>Statistical analysis- main steps</p>
 </div>
-<div class="f-30">
-<p>Step 1: Defined the causal effect using MTP framework by shifting the observed exposure to different hypothetical scenarios</p>
-<p>Step 2: Estimate the population level outcome (mean outcome) under different scenarios specified in the step</p>
-<ul>
-<li class="fragment">Targeted minimum log-based estimation (TMLE) with weighted combination data adaptive regressions (machine learning algorithms) were used to estimate outcomes.</li>
-</ul>
-<p>Step 3: Contrast the outcome estimates of hypothetical interventions against the outcome estimate under observed exposure level to calculate odds ratios.</p>
+<div class="f-25" style="padding-top:20%;">
+<p><span class="green">Step 1:</span> Defined the causal effect using MTP framework by <span class="red"><strong>shifting the observed exposure</strong></span> to different hypothetical scenarios</p>
+<p><span class="green">Step 2:</span> Estimate the population level outcome (mean outcome) under different scenarios specified in the step</p>
+<div class="bg-b">
+<blockquote>
+<p><span class="red">Targeted minimum loss-based estimation (TMLE)</span> with weighted combination data adaptive regressions (machine learning algorithms) were used to estimate outcomes.</p>
+</blockquote>
+</div>
+<p><span class="green">Step 3:</span> <span class="red">Contrast the outcome estimates</span> of hypothetical interventions against the outcome estimate under observed exposure level to calculate odds ratios.</p>
 </div>
 </section>
 <section id="methods-4" class="slide level2">
 <h2><span class="title-deco bg-y">Methods</span></h2>
 <div class="sub">
-<p>Statistical analysis- Step 1</p>
+<p>Step 1- Shifting the observed exposure</p>
 </div>
 <div class="columns f-20">
 <div class="column fragment" style="width:19.5%;">
@@ -643,7 +645,7 @@
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t3</span></td>
-<td style="text-align: left;"><span class="blink_me">t2</span></td>
+<td style="text-align: left;"><span class="c-num">t2</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">t2</td>
@@ -655,23 +657,23 @@
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t3</span></td>
-<td style="text-align: left;">t2</td>
+<td style="text-align: left;"><span class="c-num">t2</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t3</span></td>
-<td style="text-align: left;">t2</td>
+<td style="text-align: left;"><span class="c-num">t2</span></td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;"><span class="blink">t4</span></td>
+<td style="text-align: left;"><span class="c-num">t2</span></td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><span class="blink">t3</span></td>
-<td style="text-align: left;">t2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><span class="blink">t4</span></td>
-<td style="text-align: left;">t2</td>
+<td style="text-align: left;"><span class="c-num">t2</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t4</span></td>
-<td style="text-align: left;">t2</td>
+<td style="text-align: left;"><span class="c-num">t2</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">t1</td>
@@ -695,7 +697,7 @@
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t4</span></td>
-<td style="text-align: left;">t2</td>
+<td style="text-align: left;"><span class="c-num">t2</span></td>
 </tr>
 </tbody>
 </table>
@@ -714,35 +716,35 @@
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t3</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t2</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t2</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t3</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t3</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t3</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t4</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t4</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">t1</td>
@@ -750,15 +752,15 @@
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t2</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t2</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t2</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">t1</td>
@@ -766,7 +768,7 @@
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t4</span></td>
-<td style="text-align: left;">t1</td>
+<td style="text-align: left;"><span class="c-num">t1</span></td>
 </tr>
 </tbody>
 </table>
@@ -781,7 +783,7 @@
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t1</span></td>
-<td style="text-align: left;">t2</td>
+<td style="text-align: left;"><span class="c-num">t2</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">t3</td>
@@ -817,7 +819,7 @@
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t1</span></td>
-<td style="text-align: left;">t2</td>
+<td style="text-align: left;"><span class="c-num">t2</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">t2</td>
@@ -833,7 +835,7 @@
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t1</span></td>
-<td style="text-align: left;">t2</td>
+<td style="text-align: left;"><span class="c-num">t2</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">t4</td>
@@ -852,7 +854,7 @@
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t1</span></td>
-<td style="text-align: left;">t3</td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">t3</td>
@@ -860,11 +862,11 @@
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t2</span></td>
-<td style="text-align: left;">t3</td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t2</span></td>
-<td style="text-align: left;">t3</td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">t3</td>
@@ -888,23 +890,23 @@
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t1</span></td>
-<td style="text-align: left;">t3</td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t2</span></td>
-<td style="text-align: left;">t3</td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t2</span></td>
-<td style="text-align: left;">t3</td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="blink">t2</span></td>
-<td style="text-align: left;">t3</td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><span class="blink">t1</span></td>
-<td style="text-align: left;">t3</td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">t4</td>
@@ -914,24 +916,57 @@
 </table>
 </div>
 </div>
+<div class="f-15 absolute grey" style="top: 9%; left: 55%; ">
+<p><em>t1= ‘edentulous’ , t2= ‘1-9 teeth’, t3= ‘10-19 teeth’, t4= ‘&gt;=20 teeth’</em></p>
+</div>
 </section>
 <section id="methods-5" class="slide level2">
 <h2><span class="title-deco bg-r">Methods</span></h2>
 <div class="sub">
-<p>Statistical analysis- Step 2</p>
+<p>Step 2- Estimating outcome under shifted exposures</p>
+</div>
+<div class="absolute bg-r infobox f-20" style="top:30%;width:35%;left:-6%;">
+<p>🎯 Doubly-robust TMLE was used to estimate the expected outcome under;</p>
+<ul>
+<li>Observed exposure</li>
+<li>Scenario 1 (&gt;=20 teeth -&gt; 10-19 teeth)</li>
+<li>Scenario 2 (&gt;=20 teeth &amp; 10-19 teeth -&gt; 1-9 teeth)</li>
+<li>Scenario 3 (all edentulous - conterfactual extreme)</li>
+<li>Scenario 4 (edentulous -&gt; 1-9 teeth)</li>
+<li>Scenario 5 (edentulous &amp; 1-9 teeth -&gt; 10-19 teeth)</li>
+</ul>
+</div>
+<div class="absolute fragment" style="top: 12%; right: 3%; width: 700px; height: auto; ">
+<p><img data-src="img/tmle1.png"></p>
+</div>
+<div class="absolute fragment" style="top: 34%; right: -12%; width: 300px; height: auto; ">
+<p><img data-src="img/tmle2.png"></p>
+</div>
+<div class="fragment absolute" style="bottom: -1%; ">
+<p><a href="https://www.khstats.com" class="grey f-15"><em>Katherine Hoffman</em> has witten some excellent blog posts to understand TMLE: https://www.khstats.com</a></p>
 </div>
 </section>
 <section id="methods-6" class="slide level2">
 <h2><span class="title-deco bg-b">Methods</span></h2>
 <div class="sub">
-<p>Statistical analysis- Step 3</p>
+<p>Step 3- Contrast outcome estimates to obtain the causal estimand</p>
+</div>
+<p>We obtained following contrasts;</p>
+<div class="li-m2">
+<ul>
+<li class="fragment">Observed vs scenario 1</li>
+<li class="fragment">Observed vs scenario 2</li>
+<li class="fragment">Observed vs scenario 3</li>
+<li class="fragment">Observed vs scenario 4</li>
+<li class="fragment">Observed vs scenario 5</li>
+</ul>
 </div>
 </section>
-<section id="results" class="slide level2">
-<h2><span class="title-deco2 bg-b">Results</span></h2>
-<div class="sub">
-<p>Statistical analysis- Step 3</p>
-</div>
+<section id="results" class="slide level2" data-background-color="rgba(18, 14, 35, 0.66)">
+<h2><span class="title-deco2 bg-b red">Results</span></h2>
+</section>
+<section class="slide level2">
+
 <div class="footer footer-default">
 <p>2022 IADR/APR epiForum</p>
 </div>
@@ -961,7 +996,7 @@
       // https://revealjs.com/config/
       Reveal.initialize({
 'controlsAuto': true,
-'previewLinksAuto': true,
+'previewLinksAuto': false,
 'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
@@ -1090,7 +1125,7 @@
         hideCursorTime: 5000,
 
         // Opens links in an iframe preview overlay
-        previewLinks: false,
+        previewLinks: true,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
         transition: 'none',
