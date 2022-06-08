@@ -6,9 +6,9 @@ format:
     preview-links: auto
     css: "css/epiforum.css"
     parallax-background-image: "img/galaxy-s20.jpg"
-    parallax-background-size: "3400px 1400px"
+    parallax-background-size: "3202px 1024px"
     parallax-background-horizontal: 300
-    parallax-background-vertical: 2
+    parallax-background-vertical: 0
     navigation-mode: linear
     footer: "2022 IADR/APR epiForum"
 max-scale: 3
@@ -51,7 +51,7 @@ $^4$*Tokyo Medical and Dental University, Japan.*
 
 🎙️ 🇱🇰 **Upul Cooray**
 
-# [Background]{.title-deco .bg-r .red} {background-color="rgba(18, 14, 35, 0.66)"}
+## [Background]{.title-deco2 .bg-r .red} {background-color="rgba(18, 14, 35, 0.66)"}
 
 ------------------------------------------------------------------------
 
@@ -191,12 +191,252 @@ What are Modified Treatment Policies
     -   Survey weights
 :::
 
-# [Methods]{.title-deco .bg-g .red} {background-color="rgba(18, 14, 35, 0.66)"}
+------------------------------------------------------------------------
+
+## [Methods]{.title-deco2 .bg-g .red} {background-color="rgba(18, 14, 35, 0.66)"}
 
 ------------------------------------------------------------------------
 
 ## [Methods]{.title-deco .bg-g}
 
 ::: sub
-Overview
+Data & the flow of participants
+:::
+
+::: panel-tabset
+### ***Data & Participants***
+
+::: f-30
+-   Data: From the Japan Gerontological Evaluation Study (JAGES)
+
+-   JAGES is an on-going nationwide cohort study for functionally independent older adults in Japan aged 65 years or over
+
+-   Data from the 2010 survey (baseline) and two subsequent follow-up surveys (2013 and 2016) were used.
+
+-   A total of 52,053 individuals participated in the baseline survey
+
+-   24,872 individuals responded to all three waves (4,611 died, 8,099 became ineligible, and 14,471 were lost to follow-up)
+
+-   We included all (52,053) baseline participants with their follow-up state to obtain estimates accounted for censoring
+
+-   Missing data (other than due to censoring) was imputed using multiple imputation
+:::
+
+### ***Flow chart***
+
+![](img/flow.png){fig-align="center" width="428"}
+:::
+
+------------------------------------------------------------------------
+
+## [Methods]{.title-deco .bg-r}
+
+::: sub
+Study variables
+:::
+
+::: panel-tabset
+### Outcome {.f-30 .li-m}
+
+-   Social participation in 2016
+
+-   Participation in any of the activities;
+
+    -   hobby groups
+    -   sports clubs
+    -   senior citizens clubs
+    -   residence groups
+    -   or volunteer groups
+
+-   Participation in any of these activities once a month or more frequently (vs. less frequently or never) was defined as indicative of social participation ([1]{.red}=participation, [0]{.red}=non-participation)
+
+### Exposure {.li-m}
+
+-   The number of remaining natural teeth in 2010 and 2013 was used as a [time-varying exposure]{.red}
+
+-   Self-reported number of teeth was recorded in four categories (i.e., \>=20 teeth/ 10-19 teeth/ 1-9 teeth/ no teeth)
+
+### Covariates {.f-30 .li-m}
+
+-   Time-varying nature of covariates were taken into account
+
+-   Time-invariant covariates were;
+
+    -   age (range 65--99 years)
+    -   sex (male/female)
+    -   social participation in 2010 (outcome at the baseline)
+
+-   Time-varying covariates were;
+
+    -   Annual household income
+    -   Self-rated health (very good/ good/ fair/ poor)
+    -   Denture use (yes/ no)
+    -   Marital status (married/ single, widowed or divorced)
+
+### Hypothesized associations
+
+![](img/dag.png){fig-align="center" width="790"}
+:::
+
+------------------------------------------------------------------------
+
+## [Methods]{.title-deco .bg-g}
+
+::: sub
+Statistical analysis- main steps
+:::
+
+::: f-30
+Step 1: Defined the causal effect using MTP framework by shifting the observed exposure to different hypothetical scenarios
+
+Step 2: Estimate the population level outcome (mean outcome) under different scenarios specified in the step
+
+-   Targeted minimum log-based estimation (TMLE) with weighted combination data adaptive regressions (machine learning algorithms) were used to estimate outcomes.
+
+Step 3: Contrast the outcome estimates of hypothetical interventions against the outcome estimate under observed exposure level to calculate odds ratios.
+:::
+
+------------------------------------------------------------------------
+
+## [Methods]{.title-deco .bg-y}
+
+::: sub
+Statistical analysis- Step 1
+:::
+
+
+::::{.columns .f-20}
+:::{.column width="19.5%" .fragment }
+| actual |scenario 1|
+|:----|:---------|
+| t1  | t1       |
+| t3  | t3       |
+| t2  | t2       |
+| t2  | t2       |
+| t3  | t3       |
+| t3  | t3       |
+| t3  | t3       |
+| [t4]{.blink}  | [t3]{.c-num}       |
+| [t4]{.blink}  | [t3]{.c-num}       |
+| t1  | t1       |
+| t2  | t2       |
+| t2  | t2       |
+| t2  | t2       |
+| t1  | t1       |
+| [t4]{.blink}  | [t3]{.c-num}       |
+
+:::
+
+:::{.column width="19.5%" .fragment}
+| actual |scenario 2|
+|:----|:---------|
+| t1  | t1       |
+| [t3]{.blink}  | [t2]{.blink_me}       |
+| t2  | t2       |
+| t2  | t2       |
+| [t3]{.blink}  | t2       |
+| [t3]{.blink}  | t2       |
+| [t3]{.blink}  | t2       |
+| [t4]{.blink}  | t2       |
+| [t4]{.blink} | t2       |
+| t1  | t1       |
+| t2  | t2       |
+| t2  | t2       |
+| t2  | t2       |
+| t1  | t1       |
+| [t4]{.blink}  | t2       |
+
+:::
+
+:::{.column width="19.5%" .fragment}
+
+|actual |scenario 3|
+|:---|:----|
+|t1  |t1   |
+|[t3]{.blink}  |t1   |
+|[t2]{.blink}  |t1   |
+|[t2]{.blink}  |t1   |
+|[t3]{.blink}  |t1   |
+|[t3]{.blink}  |t1   |
+|[t3]{.blink}  |t1   |
+|[t4]{.blink}  |t1   |
+|[t4]{.blink}  |t1   |
+|t1  |t1   |
+|[t2]{.blink}  |t1   |
+|[t2]{.blink}  |t1   |
+|[t2]{.blink}  |t1   |
+|t1  |t1   |
+|[t4]{.blink}  |t1   |
+
+:::
+
+:::{.column width="19.5%" .fragment}
+
+|actual |scenario 4 |
+|:---|:----|
+|[t1]{.blink}  |t2   |
+|t3  |t3   |
+|t2  |t2   |
+|t2  |t2   |
+|t3  |t3   |
+|t3  |t3   |
+|t3  |t3   |
+|t4  |t4   |
+|t4  |t4   |
+|[t1]{.blink}  |t2   |
+|t2  |t2   |
+|t2  |t2   |
+|t2  |t2   |
+|[t1]{.blink}  |t2   |
+|t4  |t4   |
+:::
+
+:::{.column width="19.5%" .fragment}
+
+|actual |scenario 5 |
+|:---|:----|
+|[t1]{.blink}  |t3   |
+|t3  |t3   |
+|[t2]{.blink}  |t3   |
+|[t2]{.blink}  |t3   |
+|t3  |t3   |
+|t3  |t3   |
+|t3  |t3   |
+|t4  |t4   |
+|t4  |t4   |
+|[t1]{.blink}  |t3   |
+|[t2]{.blink}  |t3   |
+|[t2]{.blink} |t3   |
+|[t2]{.blink}  |t3   |
+|[t1]{.blink}  |t3   |
+|t4  |t4   |
+
+:::
+
+
+::::
+
+
+------------------------------------------------------------------------
+
+## [Methods]{.title-deco .bg-r}
+
+::: sub
+Statistical analysis- Step 2
+:::
+
+------------------------------------------------------------------------
+
+## [Methods]{.title-deco .bg-b}
+
+::: sub
+Statistical analysis- Step 3
+:::
+
+------------------------------------------------------------------------
+
+## [Results]{.title-deco2 .bg-b}
+
+::: sub
+Statistical analysis- Step 3
 :::

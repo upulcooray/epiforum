@@ -344,10 +344,8 @@
 </div>
 <p>🎙️ 🇱🇰 <strong>Upul Cooray</strong></p>
 </section>
-<section>
-<section id="background" class="title-slide slide level1 center" data-background-color="rgba(18, 14, 35, 0.66)">
-<h1><span class="title-deco bg-r red">Background</span></h1>
-
+<section id="background" class="slide level2" data-background-color="rgba(18, 14, 35, 0.66)">
+<h2><span class="title-deco2 bg-r red">Background</span></h2>
 </section>
 <section id="background-1" class="slide level2">
 <h2><span class="title-deco bg-r">Background</span></h2>
@@ -448,21 +446,496 @@
 </ul></li>
 </ul>
 </div>
-</section></section>
-<section>
-<section id="methods" class="title-slide slide level1 center" data-background-color="rgba(18, 14, 35, 0.66)">
-<h1><span class="title-deco bg-g red">Methods</span></h1>
-
+</section>
+<section id="methods" class="slide level2" data-background-color="rgba(18, 14, 35, 0.66)">
+<h2><span class="title-deco2 bg-g red">Methods</span></h2>
 </section>
 <section id="methods-1" class="slide level2">
 <h2><span class="title-deco bg-g">Methods</span></h2>
 <div class="sub">
-<p>Overview</p>
+<p>Data &amp; the flow of participants</p>
+</div>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><strong><em>Data &amp; Participants</em></strong></a></li><li><a href="#tabset-1-2"><strong><em>Flow chart</em></strong></a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="f-30">
+<ul>
+<li class="fragment"><p>Data: From the Japan Gerontological Evaluation Study (JAGES)</p></li>
+<li class="fragment"><p>JAGES is an on-going nationwide cohort study for functionally independent older adults in Japan aged 65 years or over</p></li>
+<li class="fragment"><p>Data from the 2010 survey (baseline) and two subsequent follow-up surveys (2013 and 2016) were used.</p></li>
+<li class="fragment"><p>A total of 52,053 individuals participated in the baseline survey</p></li>
+<li class="fragment"><p>24,872 individuals responded to all three waves (4,611 died, 8,099 became ineligible, and 14,471 were lost to follow-up)</p></li>
+<li class="fragment"><p>We included all (52,053) baseline participants with their follow-up state to obtain estimates accounted for censoring</p></li>
+<li class="fragment"><p>Missing data (other than due to censoring) was imputed using multiple imputation</p></li>
+</ul>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/flow.png" width="428"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="methods-2" class="slide level2">
+<h2><span class="title-deco bg-r">Methods</span></h2>
+<div class="sub">
+<p>Study variables</p>
+</div>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Outcome</a></li><li><a href="#tabset-2-2">Exposure</a></li><li><a href="#tabset-2-3">Covariates</a></li><li><a href="#tabset-2-4">Hypothesized associations</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="f-30 li-m">
+<ul>
+<li class="fragment"><p>Social participation in 2016</p></li>
+<li class="fragment"><p>Participation in any of the activities;</p>
+<ul>
+<li class="fragment">hobby groups</li>
+<li class="fragment">sports clubs</li>
+<li class="fragment">senior citizens clubs</li>
+<li class="fragment">residence groups</li>
+<li class="fragment">or volunteer groups</li>
+</ul></li>
+<li class="fragment"><p>Participation in any of these activities once a month or more frequently (vs.&nbsp;less frequently or never) was defined as indicative of social participation (<span class="red">1</span>=participation, <span class="red">0</span>=non-participation)</p></li>
+</ul>
+</div>
+<div id="tabset-2-2" class="li-m">
+<ul>
+<li class="fragment"><p>The number of remaining natural teeth in 2010 and 2013 was used as a <span class="red">time-varying exposure</span></p></li>
+<li class="fragment"><p>Self-reported number of teeth was recorded in four categories (i.e., &gt;=20 teeth/ 10-19 teeth/ 1-9 teeth/ no teeth)</p></li>
+</ul>
+</div>
+<div id="tabset-2-3" class="f-30 li-m">
+<ul>
+<li class="fragment"><p>Time-varying nature of covariates were taken into account</p></li>
+<li class="fragment"><p>Time-invariant covariates were;</p>
+<ul>
+<li class="fragment">age (range 65–99 years)</li>
+<li class="fragment">sex (male/female)</li>
+<li class="fragment">social participation in 2010 (outcome at the baseline)</li>
+</ul></li>
+<li class="fragment"><p>Time-varying covariates were;</p>
+<ul>
+<li class="fragment">Annual household income</li>
+<li class="fragment">Self-rated health (very good/ good/ fair/ poor)</li>
+<li class="fragment">Denture use (yes/ no)</li>
+<li class="fragment">Marital status (married/ single, widowed or divorced)</li>
+</ul></li>
+</ul>
+</div>
+<div id="tabset-2-4">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/dag.png" width="790"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="methods-3" class="slide level2">
+<h2><span class="title-deco bg-g">Methods</span></h2>
+<div class="sub">
+<p>Statistical analysis- main steps</p>
+</div>
+<div class="f-30">
+<p>Step 1: Defined the causal effect using MTP framework by shifting the observed exposure to different hypothetical scenarios</p>
+<p>Step 2: Estimate the population level outcome (mean outcome) under different scenarios specified in the step</p>
+<ul>
+<li class="fragment">Targeted minimum log-based estimation (TMLE) with weighted combination data adaptive regressions (machine learning algorithms) were used to estimate outcomes.</li>
+</ul>
+<p>Step 3: Contrast the outcome estimates of hypothetical interventions against the outcome estimate under observed exposure level to calculate odds ratios.</p>
+</div>
+</section>
+<section id="methods-4" class="slide level2">
+<h2><span class="title-deco bg-y">Methods</span></h2>
+<div class="sub">
+<p>Statistical analysis- Step 1</p>
+</div>
+<div class="columns f-20">
+<div class="column fragment" style="width:19.5%;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">actual</th>
+<th style="text-align: left;">scenario 1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">t1</td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t4</span></td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t4</span></td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t1</td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t1</td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t4</span></td>
+<td style="text-align: left;"><span class="c-num">t3</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column fragment" style="width:19.5%;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">actual</th>
+<th style="text-align: left;">scenario 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">t1</td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t3</span></td>
+<td style="text-align: left;"><span class="blink_me">t2</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t3</span></td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t3</span></td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t3</span></td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t4</span></td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t4</span></td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t1</td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t1</td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t4</span></td>
+<td style="text-align: left;">t2</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column fragment" style="width:19.5%;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">actual</th>
+<th style="text-align: left;">scenario 3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">t1</td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t3</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t2</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t2</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t3</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t3</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t3</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t4</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t4</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t1</td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t2</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t2</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t2</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t1</td>
+<td style="text-align: left;">t1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t4</span></td>
+<td style="text-align: left;">t1</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column fragment" style="width:19.5%;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">actual</th>
+<th style="text-align: left;">scenario 4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t1</span></td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t4</td>
+<td style="text-align: left;">t4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t4</td>
+<td style="text-align: left;">t4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t1</span></td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t2</td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t1</span></td>
+<td style="text-align: left;">t2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t4</td>
+<td style="text-align: left;">t4</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column fragment" style="width:19.5%;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">actual</th>
+<th style="text-align: left;">scenario 5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t1</span></td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t2</span></td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t2</span></td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t3</td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">t4</td>
+<td style="text-align: left;">t4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t4</td>
+<td style="text-align: left;">t4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t1</span></td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t2</span></td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t2</span></td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="blink">t2</span></td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="blink">t1</span></td>
+<td style="text-align: left;">t3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">t4</td>
+<td style="text-align: left;">t4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="methods-5" class="slide level2">
+<h2><span class="title-deco bg-r">Methods</span></h2>
+<div class="sub">
+<p>Statistical analysis- Step 2</p>
+</div>
+</section>
+<section id="methods-6" class="slide level2">
+<h2><span class="title-deco bg-b">Methods</span></h2>
+<div class="sub">
+<p>Statistical analysis- Step 3</p>
+</div>
+</section>
+<section id="results" class="slide level2">
+<h2><span class="title-deco2 bg-b">Results</span></h2>
+<div class="sub">
+<p>Statistical analysis- Step 3</p>
 </div>
 <div class="footer footer-default">
 <p>2022 IADR/APR epiForum</p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -641,13 +1114,13 @@
         parallaxBackgroundImage: 'img/galaxy-s20.jpg', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
 
         // Parallax background size
-        parallaxBackgroundSize: '3400px 1400px', // CSS syntax, e.g. "2100px 900px"
+        parallaxBackgroundSize: '3202px 1024px', // CSS syntax, e.g. "2100px 900px"
 
         // Amount to move parallax background (horizontal and vertical) on slide change
         // Number, e.g. 100
         parallaxBackgroundHorizontal: 300,
 
-        parallaxBackgroundVertical: 2,
+        parallaxBackgroundVertical: 0,
 
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
