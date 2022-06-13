@@ -352,87 +352,56 @@
 <div class="sub">
 <p>An Overview of Existing Causal Inference Methodology</p>
 </div>
-<div class="columns" style="font-size:30px;top:0%;">
-<div class="column" style="width:70%;">
-<div class="infobox li-m">
+<div class="fragment absolute li-m infobox f-20" style="width:40%;left:-8%;top:15%;">
 <ul>
-<li class="fragment"><p>Most methods utilize <strong>conterfactual (potential outcomes)</strong> framework</p></li>
-<li class="fragment"><p>We <strong>manipulate the exposure</strong> for the <span class="red">same observations</span> and then compare outcomes under different exposures</p></li>
-<li class="fragment"><p>Mostly, binary exposures are used [what if everyone <span class="red">exposed</span> Vs what if everyone <span class="green">not exposed</span>]</p></li>
-<li class="fragment"><p>Known as <strong>static interventions</strong></p></li>
+<li>Most methods utilize <strong>conterfactual (potential outcomes)</strong> framework</li>
 </ul>
-<div class="fragment">
-<p><img data-src="img/cf1.png" class="absolute" style="left: 10%; bottom: 0%; width: 230px; "></p>
+<blockquote>
+<p><span class="red bg-g">I.e. <strong>manipulating the exposure</strong> for the</span><span class="red">same observations</span> and then compare outcomes under different exposures</p>
+</blockquote>
+<ul>
+<li><p>Mostly, binary exposures are used [what if everyone <span class="red">exposed</span> Vs what if everyone <span class="green">not exposed</span>]</p></li>
+<li><p>Known as <strong>static interventions</strong></p></li>
+</ul>
+<p><img data-src="img/cf1.png" width="230"></p>
 </div>
-</div>
-</div><div class="column" style="width:29%;">
-<div class="infobox bg-r fragment">
+<div class="absolute bg-r infobox f-20 fragment" style="width:30%;left:34%;top:15%;">
 <p><span class="red lrb-r">Some Limitations</span></p>
 <ol type="1">
-<li class="fragment"><p>Positivity violations</p></li>
-<li class="fragment"><p>Unrealistic interventions</p></li>
-<li class="fragment"><p>Cannot depend on the observed exposure</p></li>
-<li class="fragment"><p>Policy implications of conterfactual extremes 🤔</p></li>
-<li class="fragment"><p>Forced to dichotomise the exposure</p></li>
+<li><p>Positivity violations</p></li>
+<li><p>Unrealistic interventions</p></li>
+<li><p>Cannot depend on the observed exposure</p></li>
+<li><p>Policy implications of conterfactual extremes 🤔</p></li>
+<li><p>Forced to dichotomise the exposure</p></li>
 </ol>
 </div>
+<div class="absolute bg-b infobox f-15 fragment" style="width:40%;right:-8%;top:15%;">
+<p><span class="red lrb-r f-20">Other possibilities</span></p>
+<p>🎯 Dynamic interventions</p>
+<div class="lrb-b">
+<p>Hypothetical exposure level for participants is <strong>dependent on baseline covariates</strong></p>
+<p><em>Eg: setting a certain exposure level only for participants with low income level</em></p>
 </div>
+<p><img data-src="img/dynamic.png" width="200"></p>
+<p>🎯 Modified interventions</p>
+<div class="lrb-r">
+<p>Setting participant to a new exposure level <strong>based on their observed (naturally occurring) value</strong> of the exposure</p>
+<p><em>Eg: Change the level of exposure by 10%</em></p>
 </div>
-</section>
-<section id="background2" class="slide level2">
-<h2><span class="title-deco bg-g">Background</span></h2>
-<div class="sub">
-<p>An Overview of Existing Causal Inference Methodology</p>
-</div>
-<p><br></p>
-<div class="columns">
-<div class="column" style="width:32%;">
-<div class="fragment f-25" data-fragment-index="1">
-<p>🎯 Static interventions <br> <br> <br> <br></p>
-</div>
-<div class="fragment f-20 lrb-b" data-fragment-index="2">
-<p>Setting all the participants in the study to the same hypothetical exposure level</p>
-</div>
-<div class="fragment" data-fragment-index="3">
-<p><br><br></p>
-<p><img data-src="img/static.png" width="250"></p>
-</div>
-</div><div class="column" style="width:32%;">
-<div class="fragment f-25" data-fragment-index="4">
-<p>🎯 Dynamic interventions <br> <br> <br> <br></p>
-</div>
-<div class="fragment f-20 lrb-r" data-fragment-index="5">
-<p>Hypothetical exposure level for participants is dependent on baseline covariates</p>
-<p>Eg: setting a certain exposure level only for participants with low income level</p>
-</div>
-<div class="fragment" data-fragment-index="6">
-<p><br> <img data-src="img/dynamic.png" width="250"></p>
-</div>
-</div><div class="column" style="width:32%;">
-<div class="fragment f-25" data-fragment-index="7">
-<p>🎯 Modified interventions <br> <br> <br> <br></p>
-</div>
-<div class="fragment f-20 lrb-b" data-fragment-index="8">
-<p>Setting participant to a new exposure level based on their observed (naturally occurring) value of the exposure</p>
-<p>Eg: Change the level of exposure by 10%</p>
-</div>
-<div class="fragment" data-fragment-index="9">
-<p><br> <img data-src="img/mtp.png" width="250"></p>
-</div>
-</div>
+<p><img data-src="img/mtp.png" width="200"></p>
 </div>
 </section>
 <section id="background-2" class="slide level2 li-m">
 <h2><span class="title-deco bg-b">Background</span></h2>
 <div class="sub">
-<p>What are Modified Treatment Policies</p>
+<p>What does Modified Treatment Policy framework offer</p>
 </div>
-<div class="f-22">
+<div class="f-22" style="padding-top:100px;">
 <ul>
-<li class="fragment"><p>A collection of nonparametric alternatives for defining and yielding effects from interesting causal inference questions.</p></li>
-<li class="fragment"><p>Capable of estimating meaningful interventions with practical relevance such as reducing or increasing the exposure by a given amount.</p></li>
-<li class="fragment"><p>See the paper by Iván Díaz and colleagues titled <em>“Nonparametric Causal Effects Based on Longitudinal Modified Treatment Policies”</em> for further details (R package <code>lmtp</code> provides software implementation of the methods).</p></li>
-<li class="fragment"><p><code>lmtp</code> software allows the user to handle:</p>
+<li class="fragment"><p>A collection of <span class="red"><strong>nonparametric</strong></span> alternatives for <span class="red"><strong>defining and yielding</strong></span> effects from meaningful causal inference questions</p></li>
+<li class="fragment"><p>Capable of estimating interventions with practical relevance such as reducing or increasing the exposure by a given amount</p></li>
+<li class="fragment"><p>R package <code>lmtp</code> provides software implementation of these methods. (See the paper by Iván Díaz et al.&nbsp;titled <em>“Nonparametric Causal Effects Based on Longitudinal Modified Treatment Policies”</em> for further details)</p></li>
+<li class="fragment"><p><code>lmtp</code> package allows the user to handle:</p>
 <ul>
 <li class="fragment"><p>Cross-sectional or longitudinal exposures</p></li>
 <li class="fragment"><p>Binary, categorical, or continuous exposures</p></li>
@@ -450,7 +419,7 @@
 <section id="methods" class="slide level2" data-background-color="rgba(18, 14, 35, 0.66)">
 <h2><span class="title-deco2 bg-g red">Methods</span></h2>
 </section>
-<section id="methods-1" class="slide level2">
+<section id="methods-1" class="slide level2 li-m">
 <h2><span class="title-deco bg-g">Methods</span></h2>
 <div class="sub">
 <p>Data &amp; the flow of participants</p>
@@ -461,13 +430,13 @@
 <div id="tabset-1-1">
 <div class="f-30">
 <ul>
-<li class="fragment"><p>Data: From the Japan Gerontological Evaluation Study (JAGES)</p></li>
-<li class="fragment"><p>JAGES is an on-going nationwide cohort study for functionally independent older adults in Japan aged 65 years or over</p></li>
-<li class="fragment"><p>Data from the 2010 survey (baseline) and two subsequent follow-up surveys (2013 and 2016) were used.</p></li>
-<li class="fragment"><p>A total of 52,053 individuals participated in the baseline survey</p></li>
-<li class="fragment"><p>24,872 individuals responded to all three waves (4,611 died, 8,099 became ineligible, and 14,471 were lost to follow-up)</p></li>
-<li class="fragment"><p>We included all (52,053) baseline participants with their follow-up state to obtain estimates accounted for censoring</p></li>
-<li class="fragment"><p>Missing data (other than due to censoring) was imputed using multiple imputation</p></li>
+<li><p>Data: From the Japan Gerontological Evaluation Study (<span class="red"><strong>JAGES</strong></span>)</p></li>
+<li><p>JAGES is an on-going nationwide cohort study for <strong><em>older adults</em></strong> in Japan</p></li>
+<li><p>Data from the <span class="red">2010</span> (baseline) and two subsequent follow-up surveys (<span class="red">2013 and 2016</span>) were used</p></li>
+<li><p><span class="green">52,053</span> included in the baseline survey</p></li>
+<li><p><span class="green">24,872</span> individuals responded to all three waves</p></li>
+<li><p>We included all (52,053) baseline participants with their follow-up status to obtain estimates accounted for censoring</p></li>
+<li><p>Missing data (other than due to censoring) was imputed using <strong>multiple imputation</strong> (five datasets)</p></li>
 </ul>
 </div>
 </div>
@@ -491,39 +460,39 @@
 <div class="tab-content">
 <div id="tabset-2-1" class="f-30 li-m">
 <ul>
-<li class="fragment"><p>Social participation in 2016</p></li>
-<li class="fragment"><p>Participation in any of the activities;</p>
+<li><p>Social participation in 2016</p></li>
+<li><p>Participation in any of the activities;</p>
 <ul>
-<li class="fragment">hobby groups</li>
-<li class="fragment">sports clubs</li>
-<li class="fragment">senior citizens clubs</li>
-<li class="fragment">residence groups</li>
-<li class="fragment">or volunteer groups</li>
+<li>hobby groups</li>
+<li>sports clubs</li>
+<li>senior citizens clubs</li>
+<li>residence groups</li>
+<li>or volunteer groups</li>
 </ul></li>
-<li class="fragment"><p>Participation in any of these activities once a month or more frequently (vs.&nbsp;less frequently or never) was defined as indicative of social participation (<span class="red">1</span>=participation, <span class="red">0</span>=non-participation)</p></li>
+<li><p>Participation in any of these activities <span class="red">once a month or more frequently</span> (vs.&nbsp;less frequently or never) was defined as indicative of social participation (<span class="red">1</span>=participation, <span class="red">0</span>=non-participation)</p></li>
 </ul>
 </div>
 <div id="tabset-2-2" class="li-m">
 <ul>
-<li class="fragment"><p>The number of remaining natural teeth in 2010 and 2013 was used as a <span class="red">time-varying exposure</span></p></li>
-<li class="fragment"><p>Self-reported number of teeth was recorded in four categories (i.e., &gt;=20 teeth/ 10-19 teeth/ 1-9 teeth/ no teeth)</p></li>
+<li><p>The number of remaining natural teeth in 2010 and 2013 was used as a <span class="red">time-varying exposure</span></p></li>
+<li><p>Self-reported number of teeth was recorded in four categories (i.e., &gt;=20 teeth/ 10-19 teeth/ 1-9 teeth/ no teeth)</p></li>
 </ul>
 </div>
 <div id="tabset-2-3" class="f-30 li-m">
 <ul>
-<li class="fragment"><p>Time-varying nature of covariates were taken into account</p></li>
-<li class="fragment"><p>Time-invariant covariates were;</p>
+<li><p>Time-varying nature of covariates were taken into account</p></li>
+<li><p>Time-invariant covariates were;</p>
 <ul>
-<li class="fragment">age (range 65–99 years)</li>
-<li class="fragment">sex (male/female)</li>
-<li class="fragment">social participation in 2010 (outcome at the baseline)</li>
+<li>age (range 65–99 years)</li>
+<li>sex (male/female)</li>
+<li>social participation in 2010 (outcome at the baseline)</li>
 </ul></li>
-<li class="fragment"><p>Time-varying covariates were;</p>
+<li><p>Time-varying covariates were;</p>
 <ul>
-<li class="fragment">Annual household income</li>
-<li class="fragment">Self-rated health (very good/ good/ fair/ poor)</li>
-<li class="fragment">Denture use (yes/ no)</li>
-<li class="fragment">Marital status (married/ single, widowed or divorced)</li>
+<li>Annual household income</li>
+<li>Self-rated health (very good/ good/ fair/ poor)</li>
+<li>Denture use (yes/ no)</li>
+<li>Marital status (married/ single, widowed or divorced)</li>
 </ul></li>
 </ul>
 </div>
@@ -558,13 +527,13 @@
 <div class="sub">
 <p>Step 1- Shifting the observed exposure</p>
 </div>
-<div class="columns f-20">
+<div class="columns f-15" style="padding-top:10%;">
 <div class="column fragment" style="width:19.5%;">
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">actual</th>
-<th style="text-align: left;">scenario 1</th>
+<th style="text-align: left;">Observed</th>
+<th style="text-align: left;">Scenario 1</th>
 </tr>
 </thead>
 <tbody>
@@ -630,12 +599,14 @@
 </tr>
 </tbody>
 </table>
+<p>🌎 hypothetical scenario 1</p>
+<p>t4 → t3</p>
 </div><div class="column fragment" style="width:19.5%;">
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">actual</th>
-<th style="text-align: left;">scenario 2</th>
+<th style="text-align: left;">Observed</th>
+<th style="text-align: left;">Scenario 2</th>
 </tr>
 </thead>
 <tbody>
@@ -701,12 +672,14 @@
 </tr>
 </tbody>
 </table>
+<p>🌎 hypothetical scenario 2</p>
+<p>t4 &amp; t3 → t2</p>
 </div><div class="column fragment" style="width:19.5%;">
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">actual</th>
-<th style="text-align: left;">scenario 3</th>
+<th style="text-align: left;">Observed</th>
+<th style="text-align: left;">Scenario 3</th>
 </tr>
 </thead>
 <tbody>
@@ -772,12 +745,15 @@
 </tr>
 </tbody>
 </table>
+<p>🌎 hypothetical scenario 3</p>
+<p>t4, t3, t2 → no teeth (t1)</p>
+<p>An extreme conterfactual scenario</p>
 </div><div class="column fragment" style="width:19.5%;">
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">actual</th>
-<th style="text-align: left;">scenario 4</th>
+<th style="text-align: left;">Observed</th>
+<th style="text-align: left;">Scenario 4</th>
 </tr>
 </thead>
 <tbody>
@@ -843,12 +819,14 @@
 </tr>
 </tbody>
 </table>
+<p>🌎 hypothetical scenario 4</p>
+<p>t1 (no teeth) → t2</p>
 </div><div class="column fragment" style="width:19.5%;">
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">actual</th>
-<th style="text-align: left;">scenario 5</th>
+<th style="text-align: left;">Observed</th>
+<th style="text-align: left;">Scenario 5</th>
 </tr>
 </thead>
 <tbody>
@@ -914,6 +892,10 @@
 </tr>
 </tbody>
 </table>
+<p>🌎 hypothetical scenario 5</p>
+<p>t1 &amp; t2 → t3</p>
+</div><div class="fragment f-20">
+<p>🎯 <strong><em>Doubly-robust TMLE</em></strong> was used to <span class="red">estimate the expected outcome</span> under each hypothetical scenario [<span class="blue">→ Step 2</span>]</p>
 </div>
 </div>
 <div class="f-15 absolute grey" style="top: 9%; left: 55%; ">
@@ -925,21 +907,10 @@
 <div class="sub">
 <p>Step 2- Estimating outcome under shifted exposures</p>
 </div>
-<div class="absolute bg-r infobox f-20" style="top:30%;width:35%;left:-6%;">
-<p>🎯 Doubly-robust TMLE was used to estimate the expected outcome under;</p>
-<ul>
-<li>Observed exposure</li>
-<li>Scenario 1 (&gt;=20 teeth -&gt; 10-19 teeth)</li>
-<li>Scenario 2 (&gt;=20 teeth &amp; 10-19 teeth -&gt; 1-9 teeth)</li>
-<li>Scenario 3 (all edentulous - conterfactual extreme)</li>
-<li>Scenario 4 (edentulous -&gt; 1-9 teeth)</li>
-<li>Scenario 5 (edentulous &amp; 1-9 teeth -&gt; 10-19 teeth)</li>
-</ul>
+<div data-fig-align="center" data-top="12%">
+<p><img data-src="img/tmle1.png" width="700"></p>
 </div>
-<div class="absolute fragment" style="top: 12%; right: 3%; width: 700px; height: auto; ">
-<p><img data-src="img/tmle1.png"></p>
-</div>
-<div class="absolute fragment" style="top: 34%; right: -12%; width: 300px; height: auto; ">
+<div class="absolute fragment" style="top: 32%; right: 11%; width: 350px; height: auto; ">
 <p><img data-src="img/tmle2.png"></p>
 </div>
 <div class="fragment absolute" style="bottom: -1%; ">
@@ -951,22 +922,91 @@
 <div class="sub">
 <p>Step 3- Contrast outcome estimates to obtain the causal estimand</p>
 </div>
-<p>We obtained following contrasts;</p>
-<div class="li-m2">
+<div class="li-m f-30" style="padding-top:10%;">
+<p>Finally, TMLE estimates were <span class="blue">contrasted</span> against the <strong>outcome estimate under the actual observed exposure</strong>;</p>
 <ul>
-<li class="fragment">Observed vs scenario 1</li>
-<li class="fragment">Observed vs scenario 2</li>
-<li class="fragment">Observed vs scenario 3</li>
-<li class="fragment">Observed vs scenario 4</li>
-<li class="fragment">Observed vs scenario 5</li>
+<li><p><strong>Observed</strong> vs scenario 1 <span class="f-12"><em>(t4 → t3)</em></span></p></li>
+<li><p><strong>Observed</strong> vs scenario 2 <span class="f-12"><em>(t4 &amp; t3 → t2)</em></span></p></li>
+<li><p><strong>Observed</strong> vs scenario 3 <span class="f-12"><em>(t4, t3, t2 → t1)</em></span></p></li>
+<li><p><strong>Observed</strong> vs scenario 4 <span class="f-12"><em>(t1 → t2)</em></span></p></li>
+<li><p><strong>Observed</strong> vs scenario 5 <span class="f-12"><em>(t1 &amp; t2 → t3)</em></span></p></li>
 </ul>
 </div>
 </section>
 <section id="results" class="slide level2" data-background-color="rgba(18, 14, 35, 0.66)">
 <h2><span class="title-deco2 bg-b red">Results</span></h2>
 </section>
-<section class="slide level2">
-
+<section id="results-1" class="slide level2">
+<h2><span class="title-deco bg-g">Results</span></h2>
+<div class="sub">
+<p>Contrasting outcome estimates</p>
+</div>
+<div class="absolute f-20" style="padding-top:10%;left:-6%;width:50%;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span class="blue">Contrast</span></th>
+<th style="text-align: left;">OR [95% CI]</th>
+<th style="text-align: left;">P value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Observed</strong> vs Scenario 1</td>
+<td style="text-align: left;">0.94 [0.90-0.97]</td>
+<td style="text-align: left;">0.001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Observed</strong> vs Scenario 2</td>
+<td style="text-align: left;">0.93 [0.89-0.96]</td>
+<td style="text-align: left;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Observed</strong> vs Scenario 3</td>
+<td style="text-align: left;">0.86 [0.79-0.93]</td>
+<td style="text-align: left;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Observed</strong> vs Scenario 4</td>
+<td style="text-align: left;">1.04 [1.02-1.06]</td>
+<td style="text-align: left;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Observed</strong> vs Scenario 5</td>
+<td style="text-align: left;">1.11 [1.07-1.14]</td>
+<td style="text-align: left;">0.000</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div class="infobox bg-y f-20 fragment lb-b li-m">
+<ul>
+<li><p>A clear <span class="blue"><strong>dose response effect</strong></span> of number of teeth on social participation was observed</p></li>
+<li><p>In scenarios where <span class="red">tooth loss</span> was mimicked, <span class="red">likelihood of social participation declined</span> compared to factual(observed) level.</p></li>
+<li><p>In scenarios where <span class="green">tooth gain</span>* was mimicked, <span class="green">likelihood of social participation increased</span> compared to factual(observed) level.</p></li>
+</ul>
+<p><span class="f-15">* practically, tooth gain can either be prosthetic treatments or tooth loss prevention</span></p>
+</div>
+</div>
+<div class="absolute" style="top: 9%; right: -6%; width: 650px; height: auto; ">
+<p><img data-src="img/plot.png"></p>
+</div>
+</section>
+<section id="discussion" class="slide level2" data-background-color="rgba(18, 14, 35, 0.66)">
+<h2><span class="title-deco2 bg-b red">Discussion</span></h2>
+</section>
+<section id="discussion-1" class="slide level2 li-m">
+<h2><span class="title-deco bg-b">Discussion</span></h2>
+<div class="f-30">
+<ul>
+<li class="fragment"><p>point 1</p></li>
+<li class="fragment"><p>2</p></li>
+<li class="fragment"><p>3</p></li>
+<li class="fragment"><p>4</p></li>
+<li class="fragment"><p>5</p></li>
+<li class="fragment"><p>6</p></li>
+</ul>
+</div>
 <div class="footer footer-default">
 <p>2022 IADR/APR epiForum</p>
 </div>

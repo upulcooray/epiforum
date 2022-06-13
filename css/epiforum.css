@@ -297,6 +297,10 @@ ol li::marker {
 /*font sizes*/
 
 
+.f-12{
+  font-size: 12px;
+}
+
 .f-15{
   font-size: 15px;
 }
@@ -347,4 +351,14 @@ table th, .reveal table td {
     border-bottom:0.02px dashed
 }
 
-
+.reveal blockquote {
+    display: block;
+    position: relative;
+    color: rgba(118, 123, 125, 1);
+    width: unset;
+    margin: var(--r-block-margin) auto;
+    padding: .625rem 1.75rem;
+    border-left: .25rem solid rgba(82, 136, 231, 0.84);
+    font-style: normal;
+    background: none;
+    box-shadow:none}

@@ -61,25 +61,19 @@ $^4$*Tokyo Medical and Dental University, Japan.*
 An Overview of Existing Causal Inference Methodology
 :::
 
-::: {.columns style="font-size:30px;top:0%;"}
-::: {.column width="70%"}
-::: {.infobox .li-m}
+::: {.fragment .absolute .li-m .infobox .f-20 .nonincremental style="width:40%;left:-8%;top:15%;"}
 -   Most methods utilize **conterfactual (potential outcomes)** framework
 
--   We **manipulate the exposure** for the [same observations]{.red} and then compare outcomes under different exposures
+> [I.e. **manipulating the exposure** for the]{.red .bg-g}[same observations]{.red} and then compare outcomes under different exposures
 
 -   Mostly, binary exposures are used \[what if everyone [exposed]{.red} Vs what if everyone [not exposed]{.green}\]
 
 -   Known as **static interventions**
 
-::: fragment
-![](img/cf1.png){.absolute bottom="0%" left="10%" width="230"}
-:::
-:::
+![](img/cf1.png){width="230"}
 :::
 
-::: {.column width="29%"}
-::: {.infobox .bg-r .fragment}
+::: {.absolute .bg-r .infobox .f-20 .fragment .nonincremental style="width:30%;left:34%;top:15%;"}
 [Some Limitations]{.red .lrb-r}
 
 1.  Positivity violations
@@ -92,67 +86,29 @@ An Overview of Existing Causal Inference Methodology
 
 5.  Forced to dichotomise the exposure
 :::
-:::
-:::
 
-------------------------------------------------------------------------
+::: {.absolute .bg-b .infobox .f-15 .fragment style="width:40%;right:-8%;top:15%;"}
+[Other possibilities]{.red .lrb-r .f-20}
 
-## [Background]{.title-deco .bg-g} {#background2}
+🎯 Dynamic interventions
 
-::: sub
-An Overview of Existing Causal Inference Methodology
-:::
+::: lrb-b
+Hypothetical exposure level for participants is **dependent on baseline covariates**
 
-<br>
-
-::: columns
-::: {.column width="32%"}
-::: {.fragment .f-25 fragment-index="1"}
-🎯 Static interventions <br> <br> <br> <br>
+*Eg: setting a certain exposure level only for participants with low income level*
 :::
 
-::: {.fragment .f-20 .lrb-b fragment-index="2"}
-Setting all the participants in the study to the same hypothetical exposure level
+![](img/dynamic.png){width="200"}
+
+🎯 Modified interventions
+
+::: lrb-r
+Setting participant to a new exposure level **based on their observed (naturally occurring) value** of the exposure
+
+*Eg: Change the level of exposure by 10%*
 :::
 
-::: {.fragment fragment-index="3"}
-<br><br>
-
-![](img/static.png){width="250"}
-:::
-:::
-
-::: {.column width="32%"}
-::: {.fragment .f-25 fragment-index="4"}
-🎯 Dynamic interventions <br> <br> <br> <br>
-:::
-
-::: {.fragment .f-20 .lrb-r fragment-index="5"}
-Hypothetical exposure level for participants is dependent on baseline covariates
-
-Eg: setting a certain exposure level only for participants with low income level
-:::
-
-::: {.fragment fragment-index="6"}
-<br> ![](img/dynamic.png){width="250"}
-:::
-:::
-
-::: {.column width="32%"}
-::: {.fragment .f-25 fragment-index="7"}
-🎯 Modified interventions <br> <br> <br> <br>
-:::
-
-::: {.fragment .f-20 .lrb-b fragment-index="8"}
-Setting participant to a new exposure level based on their observed (naturally occurring) value of the exposure
-
-Eg: Change the level of exposure by 10%
-:::
-
-::: {.fragment fragment-index="9"}
-<br> ![](img/mtp.png){width="250"}
-:::
-:::
+![](img/mtp.png){width="200"}
 :::
 
 ------------------------------------------------------------------------
@@ -160,17 +116,17 @@ Eg: Change the level of exposure by 10%
 ## [Background]{.title-deco .bg-b} {.li-m}
 
 ::: sub
-What are Modified Treatment Policies
+What does Modified Treatment Policy framework offer
 :::
 
-::: f-22
--   A collection of nonparametric alternatives for defining and yielding effects from interesting causal inference questions.
+::: {.f-22 style="padding-top:100px;"}
+-   A collection of [**nonparametric**]{.red} alternatives for [**defining and yielding**]{.red} effects from meaningful causal inference questions
 
--   Capable of estimating meaningful interventions with practical relevance such as reducing or increasing the exposure by a given amount.
+-   Capable of estimating interventions with practical relevance such as reducing or increasing the exposure by a given amount
 
--   See the paper by Iván Díaz and colleagues titled *"Nonparametric Causal Effects Based on Longitudinal Modified Treatment Policies"* for further details (R package `lmtp` provides software implementation of the methods).
+-   R package `lmtp` provides software implementation of these methods. (See the paper by Iván Díaz et al. titled *"Nonparametric Causal Effects Based on Longitudinal Modified Treatment Policies"* for further details)
 
--   `lmtp` software allows the user to handle:
+-   `lmtp` package allows the user to handle:
 
     -   Cross-sectional or longitudinal exposures
 
@@ -197,7 +153,7 @@ What are Modified Treatment Policies
 
 ------------------------------------------------------------------------
 
-## [Methods]{.title-deco .bg-g}
+## [Methods]{.title-deco .bg-g} {.li-m}
 
 ::: sub
 Data & the flow of participants
@@ -206,20 +162,20 @@ Data & the flow of participants
 ::: panel-tabset
 ### ***Data & Participants***
 
-::: f-30
--   Data: From the Japan Gerontological Evaluation Study (JAGES)
+::: {.f-30 .nonincremental}
+-   Data: From the Japan Gerontological Evaluation Study ([**JAGES**]{.red})
 
--   JAGES is an on-going nationwide cohort study for functionally independent older adults in Japan aged 65 years or over
+-   JAGES is an on-going nationwide cohort study for ***older adults*** in Japan
 
--   Data from the 2010 survey (baseline) and two subsequent follow-up surveys (2013 and 2016) were used.
+-   Data from the [2010]{.red} (baseline) and two subsequent follow-up surveys ([2013 and 2016]{.red}) were used
 
--   A total of 52,053 individuals participated in the baseline survey
+-   [52,053]{.green} included in the baseline survey
 
--   24,872 individuals responded to all three waves (4,611 died, 8,099 became ineligible, and 14,471 were lost to follow-up)
+-   [24,872]{.green} individuals responded to all three waves
 
--   We included all (52,053) baseline participants with their follow-up state to obtain estimates accounted for censoring
+-   We included all (52,053) baseline participants with their follow-up status to obtain estimates accounted for censoring
 
--   Missing data (other than due to censoring) was imputed using multiple imputation
+-   Missing data (other than due to censoring) was imputed using **multiple imputation** (five datasets)
 :::
 
 ### ***Flow chart***
@@ -236,7 +192,7 @@ Study variables
 :::
 
 ::: panel-tabset
-### Outcome {.f-30 .li-m}
+### Outcome {.f-30 .li-m .nonincremental}
 
 -   Social participation in 2016
 
@@ -248,15 +204,15 @@ Study variables
     -   residence groups
     -   or volunteer groups
 
--   Participation in any of these activities once a month or more frequently (vs. less frequently or never) was defined as indicative of social participation ([1]{.red}=participation, [0]{.red}=non-participation)
+-   Participation in any of these activities [once a month or more frequently]{.red} (vs. less frequently or never) was defined as indicative of social participation ([1]{.red}=participation, [0]{.red}=non-participation)
 
-### Exposure {.li-m}
+### Exposure {.li-m .nonincremental}
 
 -   The number of remaining natural teeth in 2010 and 2013 was used as a [time-varying exposure]{.red}
 
 -   Self-reported number of teeth was recorded in four categories (i.e., \>=20 teeth/ 10-19 teeth/ 1-9 teeth/ no teeth)
 
-### Covariates {.f-30 .li-m}
+### Covariates {.f-30 .li-m .nonincremental}
 
 -   Time-varying nature of covariates were taken into account
 
@@ -287,14 +243,12 @@ Statistical analysis- main steps
 :::
 
 ::: {.f-25 .nonincremental style="padding-top:20%;"}
-[Step 1:]{.green} Defined the causal effect using MTP framework by [__shifting the observed exposure__]{.red} to different hypothetical scenarios
-
+[Step 1:]{.green} Defined the causal effect using MTP framework by [**shifting the observed exposure**]{.red} to different hypothetical scenarios
 
 [Step 2:]{.green} Estimate the population level outcome (mean outcome) under different scenarios specified in the step
 
-::: {.bg-b}
->   [Targeted minimum loss-based estimation (TMLE)]{.red} with weighted combination data adaptive regressions (machine learning algorithms) were used to estimate outcomes.
-
+::: bg-b
+> [Targeted minimum loss-based estimation (TMLE)]{.red} with weighted combination data adaptive regressions (machine learning algorithms) were used to estimate outcomes.
 :::
 
 [Step 3:]{.green} [Contrast the outcome estimates]{.red} of hypothetical interventions against the outcome estimate under observed exposure level to calculate odds ratios.
@@ -308,9 +262,9 @@ Statistical analysis- main steps
 Step 1- Shifting the observed exposure
 :::
 
-::: {.columns .f-20}
+::: {.columns .f-15 style="padding-top:10%;"}
 ::: {.column .fragment width="19.5%"}
-| actual       | scenario 1   |
+| Observed     | Scenario 1   |
 |:-------------|:-------------|
 | t1           | t1           |
 | t3           | t3           |
@@ -327,10 +281,14 @@ Step 1- Shifting the observed exposure
 | t2           | t2           |
 | t1           | t1           |
 | [t4]{.blink} | [t3]{.c-num} |
+
+🌎 hypothetical scenario 1
+
+t4 → t3
 :::
 
 ::: {.column .fragment width="19.5%"}
-| actual       | scenario 2   |
+| Observed     | Scenario 2   |
 |:-------------|:-------------|
 | t1           | t1           |
 | [t3]{.blink} | [t2]{.c-num} |
@@ -347,10 +305,14 @@ Step 1- Shifting the observed exposure
 | t2           | t2           |
 | t1           | t1           |
 | [t4]{.blink} | [t2]{.c-num} |
+
+🌎 hypothetical scenario 2
+
+t4 & t3 → t2
 :::
 
 ::: {.column .fragment width="19.5%"}
-| actual       | scenario 3   |
+| Observed     | Scenario 3   |
 |:-------------|:-------------|
 | t1           | t1           |
 | [t3]{.blink} | [t1]{.c-num} |
@@ -367,10 +329,16 @@ Step 1- Shifting the observed exposure
 | [t2]{.blink} | [t1]{.c-num} |
 | t1           | t1           |
 | [t4]{.blink} | [t1]{.c-num} |
+
+🌎 hypothetical scenario 3
+
+t4, t3, t2 → no teeth (t1)
+
+An extreme conterfactual scenario
 :::
 
 ::: {.column .fragment width="19.5%"}
-| actual       | scenario 4   |
+| Observed     | Scenario 4   |
 |:-------------|:-------------|
 | [t1]{.blink} | [t2]{.c-num} |
 | t3           | t3           |
@@ -387,10 +355,14 @@ Step 1- Shifting the observed exposure
 | t2           | t2           |
 | [t1]{.blink} | [t2]{.c-num} |
 | t4           | t4           |
+
+🌎 hypothetical scenario 4
+
+t1 (no teeth) → t2
 :::
 
 ::: {.column .fragment width="19.5%"}
-| actual       | scenario 5   |
+| Observed     | Scenario 5   |
 |:-------------|:-------------|
 | [t1]{.blink} | [t3]{.c-num} |
 | t3           | t3           |
@@ -407,6 +379,14 @@ Step 1- Shifting the observed exposure
 | [t2]{.blink} | [t3]{.c-num} |
 | [t1]{.blink} | [t3]{.c-num} |
 | t4           | t4           |
+
+🌎 hypothetical scenario 5
+
+t1 & t2 → t3
+:::
+
+::: {.fragment .f-20}
+🎯 ***Doubly-robust TMLE*** was used to [estimate the expected outcome]{.red} under each hypothetical scenario \[[→ Step 2]{.blue}\]
 :::
 :::
 
@@ -422,29 +402,18 @@ Step 1- Shifting the observed exposure
 Step 2- Estimating outcome under shifted exposures
 :::
 
-::: {.absolute .bg-r .infobox .nonincremental .f-20 style="top:30%;width:35%;left:-6%;"}
-🎯 Doubly-robust TMLE was used to estimate the expected outcome under;
-
--   Observed exposure
--   Scenario 1 (\>=20 teeth -\> 10-19 teeth)
--   Scenario 2 (\>=20 teeth & 10-19 teeth -\> 1-9 teeth)
--   Scenario 3 (all edentulous - conterfactual extreme)
--   Scenario 4 (edentulous -\> 1-9 teeth)
--   Scenario 5 (edentulous & 1-9 teeth -\> 10-19 teeth)
+::: {fig-align="center" top="12%"}
+![](img/tmle1.png){width="700px" height="auto"}
 :::
 
-::: {.absolute .fragment right="3%" top="12%" width="700px" height="auto"}
-![](img/tmle1.png)
-:::
-
-::: {.absolute .fragment right="-12%" top="34%" width="300px" height="auto"}
+::: {.absolute .fragment right="11%" top="32%" width="350px" height="auto"}
 ![](img/tmle2.png)
 :::
 
-
-:::{.fragment .absolute bottom="-1%"}
-[_Katherine Hoffman_ has witten some excellent blog posts to understand TMLE: https://www.khstats.com](https://www.khstats.com){.grey .f-15}
+::: {.fragment .absolute bottom="-1%"}
+[*Katherine Hoffman* has witten some excellent blog posts to understand TMLE: https://www.khstats.com](https://www.khstats.com){.grey .f-15}
 :::
+
 ------------------------------------------------------------------------
 
 ## [Methods]{.title-deco .bg-b}
@@ -453,23 +422,95 @@ Step 2- Estimating outcome under shifted exposures
 Step 3- Contrast outcome estimates to obtain the causal estimand
 :::
 
-We obtained following contrasts;
+::: {.li-m .f-30 .nonincremental style="padding-top:10%;"}
+Finally, TMLE estimates were [contrasted]{.blue} against the **outcome estimate under the actual observed exposure**;
 
-:::{.li-m2}
-   - Observed vs scenario 1
-   - Observed vs scenario 2
-   - Observed vs scenario 3
-   - Observed vs scenario 4
-   - Observed vs scenario 5
+-   **Observed** vs scenario 1 [*(t4 → t3)*]{.f-12}
+
+-   **Observed** vs scenario 2 [*(t4 & t3 → t2)*]{.f-12}
+
+-   **Observed** vs scenario 3 [*(t4, t3, t2 → t1)*]{.f-12}
+
+-   **Observed** vs scenario 4 [*(t1 → t2)*]{.f-12}
+
+-   **Observed** vs scenario 5 [*(t1 & t2 → t3)*]{.f-12}
 :::
-
-
 
 ------------------------------------------------------------------------
 
 ## [Results]{.title-deco2 .bg-b .red} {background-color="rgba(18, 14, 35, 0.66)"}
 
----
+------------------------------------------------------------------------
+
+## [Results]{.title-deco .bg-g}
+
+::: sub
+Contrasting outcome estimates
+:::
+
+
+::: {.absolute .f-20 style="padding-top:10%;left:-6%;width:50%;"}
+
+|[Contrast]{.blue} |OR [95% CI]      |P value | 
+|:--------|:----------------|:-------|
+|**Observed** vs Scenario 1 |0.94 [0.90-0.97] |0.001   |
+|**Observed** vs Scenario 2|0.93 [0.89-0.96] |0.000   |
+|**Observed** vs Scenario 3 |0.86 [0.79-0.93] |0.000   |
+|**Observed** vs Scenario 4 |1.04 [1.02-1.06] |0.000   |
+|**Observed** vs Scenario 5 |1.11 [1.07-1.14] |0.000   |
+
+ <br/>
+ 
+:::{.infobox .bg-y .f-20 .fragment .lb-b .li-m .nonincremental}
+ - A clear [**dose response effect**]{.blue} of number of teeth on social participation was observed
+ 
+ - In scenarios where [tooth loss]{.red} was mimicked, [likelihood  of social participation declined]{.red} compared to factual(observed) level.
+ 
+
+ - In scenarios where [tooth gain]{.green}* was mimicked, [likelihood  of social participation increased]{.green} compared to factual(observed) level.
+ 
+ [* practically, tooth gain can either be prosthetic treatments or tooth loss prevention]{.f-15}
+:::
+
+:::
+
+
+::: {.absolute  right="-6%" top="9%" width="650px" height="auto"}
+![](img/plot.png)
+:::
+
+----------------------------
+
+## [Discussion]{.title-deco2 .bg-b .red} {background-color="rgba(18, 14, 35, 0.66)"}
+
+---------------------------
+
+## [Discussion]{.title-deco .bg-b }  {.li-m}
+
+:::{.f-30}
+
+- point 1
+
+
+- 2
+
+
+- 3
+
+
+- 4
+
+
+- 5
+
+
+- 6
+
+
+
+:::
+
+
 
 
 
