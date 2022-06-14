@@ -394,7 +394,7 @@
 <section id="background-2" class="slide level2 li-m">
 <h2><span class="title-deco bg-b">Background</span></h2>
 <div class="sub">
-<p>What does Modified Treatment Policy framework offer</p>
+<p>What does Modified Treatment Policy (MTP) framework offer</p>
 </div>
 <div class="f-22" style="padding-top:100px;">
 <ul>
@@ -979,7 +979,7 @@
 </tbody>
 </table>
 <p><br></p>
-<div class="infobox bg-y f-20 fragment lb-b li-m">
+<div class="infobox bg-y f-20 fragment lb-b li-m" data-fragment-index="2">
 <ul>
 <li><p>A clear <span class="blue"><strong>dose response effect</strong></span> of number of teeth on social participation was observed</p></li>
 <li><p>In scenarios where <span class="red">tooth loss</span> was mimicked, <span class="red">likelihood of social participation declined</span> compared to factual(observed) level.</p></li>
@@ -991,22 +991,41 @@
 <div class="absolute" style="top: 9%; right: -6%; width: 650px; height: auto; ">
 <p><img data-src="img/plot.png"></p>
 </div>
+<div class="absolute fragment bg-g infobox lrb-r f-12" data-fragment-index="1" style="top: 12%; right: 12%; width: 24%; ">
+<p>✔️ Adjusted for age,sex,income, denture use, marital status, self-rated health &amp; baseline social participation</p>
+<p>✔️ Allowing time varying nature of the exposure and covariates</p>
+<p>✔️ Informative censoring</p>
+<p>✔️ TMLE estimates were cross validated (x10 folds)</p>
+</div>
 </section>
-<section id="discussion" class="slide level2" data-background-color="rgba(18, 14, 35, 0.66)">
-<h2><span class="title-deco2 bg-b red">Discussion</span></h2>
+<section id="summary" class="slide level2" data-background-color="rgba(18, 14, 35, 0.66)">
+<h2><span class="title-deco2 bg-b red">Summary</span></h2>
 </section>
-<section id="discussion-1" class="slide level2 li-m">
-<h2><span class="title-deco bg-b">Discussion</span></h2>
-<div class="f-30">
+<section id="summary-1" class="slide level2 li-m">
+<h2><span class="title-deco bg-b red">Summary</span></h2>
+<div class="f-25">
 <ul>
-<li class="fragment"><p>point 1</p></li>
-<li class="fragment"><p>2</p></li>
-<li class="fragment"><p>3</p></li>
-<li class="fragment"><p>4</p></li>
-<li class="fragment"><p>5</p></li>
-<li class="fragment"><p>6</p></li>
+<li class="fragment"><p>Existing causal inference methods has several limitations, especially in the presence of categorical or a continuous exposure</p></li>
+<li class="fragment"><p>Contrasting two conterfactual outcomes might not be realistic and the policy implications are questionable</p></li>
+<li class="fragment"><p>MTP provides a flexible framework that allows implementation of variety of interventions (static, dynamic, or modified)</p></li>
+<li class="fragment"><p>MTP can be used to identify the dose-response effect in the presence of non-binary exposure</p></li>
+<li class="fragment"><p>Contrasting the outcome estimate of the interventions against the observed outcome can provide more realistic policy implications</p></li>
 </ul>
 </div>
+</section>
+<section id="questions-for-discussion" class="slide level2 cen">
+<h2><span class="lrb-b bg-r green">Questions for discussion</span></h2>
+<ol type="1">
+<li class="fragment">How do you deal with causal inference questions involving non-binary exposures?</li>
+</ol>
+<p><br></p>
+<ol start="2" type="1">
+<li class="fragment">How important it is to investigate dose-response to suggest causality?</li>
+</ol>
+<p><br></p>
+<ol start="3" type="1">
+<li class="fragment">What is your opinion on incorporating machine learning and non-parametric methods in causal inference studies?</li>
+</ol>
 <div class="footer footer-default">
 <p>2022 IADR/APR epiForum</p>
 </div>

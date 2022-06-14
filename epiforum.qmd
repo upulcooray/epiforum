@@ -116,7 +116,7 @@ Setting participant to a new exposure level **based on their observed (naturally
 ## [Background]{.title-deco .bg-b} {.li-m}
 
 ::: sub
-What does Modified Treatment Policy framework offer
+What does Modified Treatment Policy (MTP) framework offer
 :::
 
 ::: {.f-22 style="padding-top:100px;"}
@@ -448,72 +448,78 @@ Finally, TMLE estimates were [contrasted]{.blue} against the **outcome estimate 
 Contrasting outcome estimates
 :::
 
-
 ::: {.absolute .f-20 style="padding-top:10%;left:-6%;width:50%;"}
+| [Contrast]{.blue}          | OR \[95% CI\]      | P value |
+|:---------------------------|:-------------------|:--------|
+| **Observed** vs Scenario 1 | 0.94 \[0.90-0.97\] | 0.001   |
+| **Observed** vs Scenario 2 | 0.93 \[0.89-0.96\] | 0.000   |
+| **Observed** vs Scenario 3 | 0.86 \[0.79-0.93\] | 0.000   |
+| **Observed** vs Scenario 4 | 1.04 \[1.02-1.06\] | 0.000   |
+| **Observed** vs Scenario 5 | 1.11 \[1.07-1.14\] | 0.000   |
 
-|[Contrast]{.blue} |OR [95% CI]      |P value | 
-|:--------|:----------------|:-------|
-|**Observed** vs Scenario 1 |0.94 [0.90-0.97] |0.001   |
-|**Observed** vs Scenario 2|0.93 [0.89-0.96] |0.000   |
-|**Observed** vs Scenario 3 |0.86 [0.79-0.93] |0.000   |
-|**Observed** vs Scenario 4 |1.04 [1.02-1.06] |0.000   |
-|**Observed** vs Scenario 5 |1.11 [1.07-1.14] |0.000   |
+<br/>
 
- <br/>
- 
-:::{.infobox .bg-y .f-20 .fragment .lb-b .li-m .nonincremental}
- - A clear [**dose response effect**]{.blue} of number of teeth on social participation was observed
- 
- - In scenarios where [tooth loss]{.red} was mimicked, [likelihood  of social participation declined]{.red} compared to factual(observed) level.
- 
+::: {.infobox .bg-y .f-20 .fragment fragment-index="2" .lb-b .li-m .nonincremental}
+-   A clear [**dose response effect**]{.blue} of number of teeth on social participation was observed
 
- - In scenarios where [tooth gain]{.green}* was mimicked, [likelihood  of social participation increased]{.green} compared to factual(observed) level.
- 
- [* practically, tooth gain can either be prosthetic treatments or tooth loss prevention]{.f-15}
+-   In scenarios where [tooth loss]{.red} was mimicked, [likelihood of social participation declined]{.red} compared to factual(observed) level.
+
+-   In scenarios where [tooth gain]{.green}\* was mimicked, [likelihood of social participation increased]{.green} compared to factual(observed) level.
+
+[\* practically, tooth gain can either be prosthetic treatments or tooth loss prevention]{.f-15}
+:::
 :::
 
+::: {.absolute right="-6%" top="9%" width="650px" height="auto"}
+![](img/plot.png) 
 :::
 
+::: {.absolute .fragment fragment-index="1" .bg-g .infobox .lrb-r .f-12 width="24%" right="12%" top="12%"}
+✔️  Adjusted for age,sex,income, denture use, marital status, self-rated health & baseline social participation
 
-::: {.absolute  right="-6%" top="9%" width="650px" height="auto"}
-![](img/plot.png)
-:::
+✔️ Allowing time varying nature of the exposure and covariates
 
-----------------------------
+✔️ Informative censoring
 
-## [Discussion]{.title-deco2 .bg-b .red} {background-color="rgba(18, 14, 35, 0.66)"}
-
----------------------------
-
-## [Discussion]{.title-deco .bg-b }  {.li-m}
-
-:::{.f-30}
-
-- point 1
-
-
-- 2
-
-
-- 3
-
-
-- 4
-
-
-- 5
-
-
-- 6
-
-
+✔️ TMLE estimates were cross validated (x10 folds)
 
 :::
 
+------------------------------------------------------------------------
+
+## [Summary]{.title-deco2 .bg-b .red} {background-color="rgba(18, 14, 35, 0.66)"}
+
+------------------------------------------------------------------------
+
+## [Summary]{.title-deco .bg-b .red}  {.li-m}
+
+::: f-25
+
+- Existing causal inference methods has several limitations, especially in the presence of categorical or a continuous exposure
+
+- Contrasting two conterfactual outcomes might not be realistic and the policy implications are questionable
+
+- MTP provides a flexible framework that allows implementation of variety of interventions (static, dynamic, or modified) 
+
+- MTP can be used to identify the dose-response effect in the presence of non-binary exposure
+
+- Contrasting the outcome estimate of the interventions against the observed outcome can provide more realistic policy implications
 
 
+:::
+
+-------------
+
+## [Questions for discussion]{.lrb-b  .bg-r .green } {.cen}
+
+1. How do you deal with causal inference questions involving non-binary exposures?
+
+<br/>
+
+2. How important it is to investigate dose-response to suggest causality?
 
 
+<br/>
 
-
+3. What is your opinion on incorporating machine learning and non-parametric methods in causal inference studies?
 

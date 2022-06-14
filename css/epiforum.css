@@ -210,18 +210,22 @@ ol li::marker {
 
 .li-m ul li:nth-child(2n+2){
     list-style-type: "👉🏽 ";
+    list-sty
 }
 
 .li-m ul li li{
-    list-style-type: "✅"      ;
+    list-style-type: "✅ ";
 }
 .li-m2 ul li li{
-    list-style-type: "✅"      ;
+    list-style-type: "✅️ "     ;
 }
 
 .li-m ul li li:nth-child(2n+2){
-    list-style-type: "✅";
+    list-style-type: "✅️ ";
 }
+
+
+
 
 
 /* tabset controls*/
